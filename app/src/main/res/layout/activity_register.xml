@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/createaccount" />
+
+    <EditText
+        android:id="@+id/mailregis"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="228dp"
+        android:backgroundTint="#EB6B03"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/passregis"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/mailregis"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:backgroundTint="#EB6B03"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/userregis"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/passregis"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#EB6B03"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/phoneregis"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/userregis"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#EB6B03"
+        android:ems="10"
+        android:hint="Phone number"
+        android:inputType="textPersonName"
+        android:textSize="15dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBarset"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="178dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnregis"
+        android:layout_width="240dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        app:cardBackgroundColor="#EB6B03"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Register"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneregis"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="13dp"
+        android:text="I'm a . . ."
+        android:textColor="#eb6b01"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="70dp">
+
+        <RadioButton
+            android:id="@+id/merchantchoose"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Merchant"
+            android:textColor="#EB6B03" />
+
+        <RadioButton
+            android:id="@+id/customerchoose"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Customer"
+            android:textColor="#EB6B03" />
+    </RadioGroup>
+
+
+</RelativeLayout>
