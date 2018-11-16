@@ -52,7 +52,7 @@ public class HomeCFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((Homecustumer)getActivity()).setActionBarTitle("Home customer");
+        ((Homecustumer)getActivity()).setActionBarTitle("Home");
         View view = inflater.inflate(R.layout.fragment_home_c, container, false);
         // Inflate the layout for this fragment
 

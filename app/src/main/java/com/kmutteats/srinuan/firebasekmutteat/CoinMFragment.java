@@ -24,7 +24,7 @@ public class CoinMFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((Homecustumer)getActivity()).setActionBarTitle("Coin");
+        ((Homemerchant)getActivity()).setActionBarTitle("Coin");
         // Inflate the layout for this fragment
         return inflater.inflate( R.layout.fragment_coin_m, container, false );
     }
