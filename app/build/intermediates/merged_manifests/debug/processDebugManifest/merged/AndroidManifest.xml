@@ -51,6 +51,10 @@
         <activity android:name="com.kmutteats.srinuan.firebasekmutteat.menulist" />
         <activity android:name="com.kmutteats.srinuan.firebasekmutteat.addmenu" />
         <activity
+            android:name="com.kmutteats.srinuan.firebasekmutteat.Homemerchant"
+            android:label="@string/title_activity_homemerchant"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
             android:exported="true"

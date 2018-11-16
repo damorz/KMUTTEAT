@@ -47,11 +47,9 @@ public class Homecustumer extends AppCompatActivity
         //deflat fragment for home
 
 
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.Flmain, new HomeCFragment());
-            ft.commit();
-
-
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.Flmain, new HomeCFragment());
+        ft.commit();
 
         navigationView.setCheckedItem(R.id.nav_home);
     }

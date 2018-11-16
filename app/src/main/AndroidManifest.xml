@@ -30,7 +30,11 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".CreateRes" />
         <activity android:name=".menulist" />
-        <activity android:name=".addmenu"></activity>
+        <activity android:name=".addmenu" />
+        <activity
+            android:name=".Homemerchant"
+            android:label="@string/title_activity_homemerchant"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -38,5 +38,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.firebase:firebase-storage:16.0.1'
     implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.android.support:mediarouter-v7:1.0.0-alpha1'
 }
 apply plugin: 'com.google.gms.google-services'

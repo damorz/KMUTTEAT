@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity
         checkbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent y = new Intent(MainActivity.this,Homecustumer.class);  ///////////////////////////////////////////// !!!!!!! อันนี้เป็นปุ่มเทสที่อยู่บนสุดของหน้าแรก
+                Intent y = new Intent(MainActivity.this,Homemerchant.class);  ///////////////////////////////////////////// !!!!!!! อันนี้เป็นปุ่มเทสที่อยู่บนสุดของหน้าแรก
                 startActivity(y);
             }
         });
@@ -262,7 +262,7 @@ public class MainActivity extends AppCompatActivity
                                 }
                                 else if (statuscheck.equals("Merchant"))
                                 {
-                                    Intent k = new Intent(MainActivity.this,Homecustumer.class); ////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
+                                    Intent k = new Intent(MainActivity.this,Homemerchant.class); ////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
                                     k.putExtra("mail",email);
                                     k.putExtra("statuscheck",statuscheck);
                                     startActivity(k);
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity
                                 }
                                 else if (statuscheck.equals("Merchant"))
                                 {
-                                    Intent k = new Intent(MainActivity.this,Homecustumer.class);////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
+                                    Intent k = new Intent(MainActivity.this,Homemerchant.class);////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
                                     k.putExtra("mail",email);
                                     k.putExtra("statuscheck",statuscheck);
                                     startActivity(k);
