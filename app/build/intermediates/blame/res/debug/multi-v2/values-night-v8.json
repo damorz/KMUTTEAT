@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\ADMIN\\AndroidStudioProjects\\FireBaseKMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2bac95458547d1832f6c2e56a224eb2c\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5a1600bcc33674645f642e9185fb33df\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\ADMIN\\AndroidStudioProjects\\FireBaseKMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ed715464a6a41cd076e91a7bc4c76fb2\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\7f3fd142ba927eb13b2eae00f4dba0ca\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2bac95458547d1832f6c2e56a224eb2c\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5a1600bcc33674645f642e9185fb33df\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
