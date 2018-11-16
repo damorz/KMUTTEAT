@@ -106,7 +106,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/signout1"
+        android:id="@+id/createacc"
         android:layout_width="230dp"
         android:layout_height="35dp"
         android:layout_alignParentBottom="true"
@@ -119,8 +119,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignLeft="@+id/signout1"
-            android:layout_alignTop="@+id/signout1">
+            android:layout_alignLeft="@+id/createacc"
+            android:layout_alignTop="@+id/createacc">
 
 
             <TextView
@@ -128,7 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Sign out"
+                android:text="Create Account"
                 android:textColor="#EB6B03"
                 android:textSize="15sp" />
 
@@ -136,13 +136,13 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/createacc"
+        android:id="@+id/forgetpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:text="Create Account"
+        android:text="Forget Password?"
         android:textColor="#ffffff" />
 
     <Button

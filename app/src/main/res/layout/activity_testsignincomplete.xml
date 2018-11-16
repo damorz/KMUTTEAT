@@ -30,8 +30,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignLeft="@+id/signout1"
-            android:layout_alignTop="@+id/signout1">
+            android:layout_alignLeft="@+id/createacc"
+            android:layout_alignTop="@+id/createacc">
 
 
             <TextView

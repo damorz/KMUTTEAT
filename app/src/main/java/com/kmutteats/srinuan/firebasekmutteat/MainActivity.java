@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     // UI references.
     private EditText mEmail, mPassword;
-    private CardView btnSignIn,btnSignOut;
-    private TextView gotoC;
+    private CardView btnSignIn,creatwaccbtn;
+    private TextView forgerpassbtn;
     private Button checkbtn;
     public static final String STATUS_KEY = "Status";
     public static final String USERNAME_KEY = "Username";
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
         btnSignIn = (CardView) findViewById(R.id.signin1);
-        btnSignOut = (CardView) findViewById(R.id.signout1);
-        gotoC = (TextView) findViewById(R.id.createacc);
+        creatwaccbtn = (CardView) findViewById(R.id.createacc);
+        forgerpassbtn = (TextView) findViewById(R.id.forgetpass);
         checkbtn = (Button) findViewById(R.id.CheckFGbt);
 
 
@@ -120,17 +120,17 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        btnSignOut.setOnClickListener(new View.OnClickListener()
+        forgerpassbtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                mAuth.signOut();
-                toastMessage("Signing Out . . .");
+                Intent p = new Intent(MainActivity.this , Forgetpass.class);
+                startActivity(p);
             }
         });
 
-        gotoC.setOnClickListener(new View.OnClickListener()
+        creatwaccbtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)

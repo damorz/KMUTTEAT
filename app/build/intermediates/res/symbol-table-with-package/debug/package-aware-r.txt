@@ -1501,6 +1501,8 @@ id filled
 id fixed
 id flip
 id forever
+id forgetpass
+id forgetsend
 id ghost_view
 id gone
 id group_divider
@@ -1518,6 +1520,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id imgView
 id info
 id invisible
@@ -1663,12 +1666,12 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sendbtn
 id shortcut
 id showCustom
 id showHome
 id showTitle
 id signin1
-id signout1
 id signouttest
 id sin
 id smallLabel
@@ -1710,6 +1713,8 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView8
+id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
