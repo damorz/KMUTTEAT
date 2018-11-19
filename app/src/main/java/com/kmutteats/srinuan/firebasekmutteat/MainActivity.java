@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -326,6 +330,34 @@ public class MainActivity extends AppCompatActivity
             //i.putExtra("mail",email);
             //startActivity(i);
         }
+    }
+
+    //status test 336-361
+    public void statusOF(final String statusOF)
+    {
+
+        final Switch SWstatusOF=(Switch)findViewById( R.id.SWstatusOF );
+        SWstatusOF.setOnClickListener( new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Map<String, Object> info = new HashMap<>();
+                //perform action on click
+                if(SWstatusOF.isChecked()==true)
+                {
+                    String statusOF = "now open";
+                    info.put("Status RES",statusOF);
+                }
+                else
+                {
+                    String statusOF = "closed";
+                    info.put("Status RES",statusOF);
+                }
+                db.collection("Restaurant").document(statusOF)
+                        .set(info);
+            }
+        });
     }
 }
 

@@ -1398,6 +1398,7 @@ id Menuinfo
 id Name
 id Phone
 id SHIFT
+id SWstatusOF
 id SYM
 id Status
 id accelerate

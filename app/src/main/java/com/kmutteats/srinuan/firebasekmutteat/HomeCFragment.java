@@ -116,7 +116,9 @@ public class HomeCFragment extends Fragment {
                                     querySnapshot.getString("Restaurant name"),
                                     querySnapshot.getString("Description"),
                                     querySnapshot.getString("Location"),
-                                    querySnapshot.getString("Phone number"));
+                                    querySnapshot.getString("Phone number"),
+                                    querySnapshot.getString("StatusOF")); //status test
+
                             userArrayList.add(user);
                         }
                         final ArrayList<Integer> icon = new ArrayList<>();
