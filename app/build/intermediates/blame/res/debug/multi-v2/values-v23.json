@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\36f94bbde6a7b83c24db6dae5674182a\\res\\values-v23\\values-v23.xml",

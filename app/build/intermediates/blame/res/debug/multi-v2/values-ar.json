@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
             "map": [
                 {
                     "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-15.0.1.aar\\6609fd8dc256b92b8fe72d3377499a77\\res\\values-ar\\values.xml",

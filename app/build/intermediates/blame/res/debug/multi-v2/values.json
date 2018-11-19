@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\coordinatorlayout-1.0.0.aar\\5cedf017653abae833baada635a6d615\\res\\values\\values.xml",
@@ -42,41 +42,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "9,1,14,12,13,15,8,7,6,5,4,3,16,2",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "531,17,762,646,717,801,468,392,331,254,179,109,840,66",
-                        "endColumns": "52,47,37,69,43,37,61,74,59,75,73,68,68,41",
-                        "endOffsets": "579,60,795,711,756,834,525,462,386,325,248,173,904,103"
-                    },
-                    "to": {
-                        "startLines": "2448,2449,2454,2483,2485,2486,2512,2513,2514,2515,2516,2525,2526,2527",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "151716,151769,152289,155812,156035,156079,157869,157931,158006,158066,158142,159215,159284,159353",
-                        "endColumns": "52,47,37,69,43,37,61,74,59,75,73,68,68,41",
-                        "endOffsets": "151764,151812,152322,155877,156074,156112,157926,158001,158061,158137,158211,159279,159348,159390"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,306,388,492,595,715,811",
-                        "endColumns": "143,106,81,103,102,119,95,72",
-                        "endOffsets": "194,301,383,487,590,710,806,879"
-                    },
-                    "to": {
-                        "startLines": "2473,2477,2478,2479,2480,2481,2482,2522",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "154660,155200,155307,155389,155493,155596,155716,159018",
-                        "endColumns": "143,106,81,103,102,119,95,72",
-                        "endOffsets": "154799,155302,155384,155488,155591,155711,155807,159086"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "3,2",
                         "startColumns": "4,4",
@@ -93,7 +59,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -107,23 +73,6 @@
                         "startOffsets": "15892",
                         "endColumns": "56",
                         "endOffsets": "15944"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\values\\dimens.xml",
-                    "from": {
-                        "startLines": "2,3,6,5,4",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "90,149,316,265,206",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "143,200,353,310,259"
-                    },
-                    "to": {
-                        "startLines": "2190,2191,2248,2316,2317",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "135428,135486,139177,143489,143539",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "135481,135537,139214,143534,143592"
                     }
                 },
                 {
@@ -201,20 +150,37 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\values\\drawables.xml",
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\src\\main\\res\\values\\dimens.xml",
                     "from": {
-                        "startLines": "1,2,4,6,5,3",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "76,165,351,527,440,256",
-                        "endColumns": "87,89,87,83,85,93",
-                        "endOffsets": "159,250,434,606,521,345"
+                        "startLines": "2,3,6,5,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "90,149,316,265,206",
+                        "endColumns": "57,55,41,49,57",
+                        "endOffsets": "143,200,353,310,259"
                     },
                     "to": {
-                        "startLines": "2345,2346,2347,2348,2349,2350",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "145240,145328,145418,145506,145590,145676",
-                        "endColumns": "87,89,87,83,85,93",
-                        "endOffsets": "145323,145413,145501,145585,145671,145765"
+                        "startLines": "2190,2191,2248,2316,2317",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "135428,135486,139177,143489,143539",
+                        "endColumns": "57,55,41,49,57",
+                        "endOffsets": "135481,135537,139214,143534,143592"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "9,1,14,12,13,15,8,7,6,5,4,3,16,2",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "531,17,762,646,717,801,468,392,331,254,179,109,840,66",
+                        "endColumns": "52,47,37,69,43,37,61,74,59,75,73,68,68,41",
+                        "endOffsets": "579,60,795,711,756,834,525,462,386,325,248,173,904,103"
+                    },
+                    "to": {
+                        "startLines": "2448,2449,2454,2483,2485,2486,2512,2513,2514,2515,2516,2525,2526,2527",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "151716,151769,152289,155812,156035,156079,157869,157931,158006,158066,158142,159215,159284,159353",
+                        "endColumns": "52,47,37,69,43,37,61,74,59,75,73,68,68,41",
+                        "endOffsets": "151764,151812,152322,155877,156074,156112,157926,158001,158061,158137,158211,159279,159348,159390"
                     }
                 },
                 {
@@ -237,6 +203,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\src\\main\\res\\values\\drawables.xml",
+                    "from": {
+                        "startLines": "1,2,4,6,5,3",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "76,165,351,527,440,256",
+                        "endColumns": "87,89,87,83,85,93",
+                        "endOffsets": "159,250,434,606,521,345"
+                    },
+                    "to": {
+                        "startLines": "2345,2346,2347,2348,2349,2350",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "145240,145328,145418,145506,145590,145676",
+                        "endColumns": "87,89,87,83,85,93",
+                        "endOffsets": "145323,145413,145501,145585,145671,145765"
+                    }
+                },
+                {
                     "source": "C:\\Users\\proy\\.gradle\\caches\\transforms-1\\files-1.1\\transition-1.0.0.aar\\563d2564b76affefe57b3381d1af006c\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -251,6 +234,25 @@
                         "startOffsets": "146123,146453,146592,146639,146694,147288,147342,147394,147443,147504",
                         "endColumns": "39,42,46,54,44,53,51,48,60,49",
                         "endOffsets": "146158,146491,146634,146689,146734,147337,147389,147438,147499,147549"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,16,11,18",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "57,501,345,595",
+                        "endLines": "9,16,14,18",
+                        "endColumns": "12,90,12,80",
+                        "endOffsets": "337,587,493,671"
+                    },
+                    "to": {
+                        "startLines": "2537,2544,2545,2549",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "160114,160393,160483,160633",
+                        "endLines": "2543,2544,2548,2549",
+                        "endColumns": "12,89,12,79",
+                        "endOffsets": "160388,160478,160628,160708"
                     }
                 },
                 {
@@ -273,22 +275,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\proy\\AndroidStudioProjects\\statustestKMUTTEAT\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
-                        "startLines": "3,16,11,18",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "57,501,345,595",
-                        "endLines": "9,16,14,18",
-                        "endColumns": "12,90,12,80",
-                        "endOffsets": "337,587,493,671"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,306,388,492,595,715,811",
+                        "endColumns": "143,106,81,103,102,119,95,72",
+                        "endOffsets": "194,301,383,487,590,710,806,879"
                     },
                     "to": {
-                        "startLines": "2537,2544,2545,2549",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "160114,160393,160483,160633",
-                        "endLines": "2543,2544,2548,2549",
-                        "endColumns": "12,89,12,79",
-                        "endOffsets": "160388,160478,160628,160708"
+                        "startLines": "2473,2477,2478,2479,2480,2481,2482,2522",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "154660,155200,155307,155389,155493,155596,155716,159018",
+                        "endColumns": "143,106,81,103,102,119,95,72",
+                        "endOffsets": "154799,155302,155384,155488,155591,155711,155807,159086"
                     }
                 },
                 {

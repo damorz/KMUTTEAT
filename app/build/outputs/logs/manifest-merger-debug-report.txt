@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\df55d2c0df81523fe5bb3f6f54200cc2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\22bce6ca6e49f348493897ca8d92ba8f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d91a82967b108a3e759cfb898c140ae2\AndroidManifest.xml:17:1-24:12
@@ -66,25 +66,25 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\proy\.gradle\c
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\8493cf7b21d201a532c18331112e5ef1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:15.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-15.0.0.aar\5ba70b457e03a84d1a09028bd2c69cd7\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\490b9a0e144d8764d8a5aab41ddd55d9\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:3:5-53
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:3:5-53
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:1-40:12
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:5:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\jetified-firebase-measurement-connector-impl-16.0.1.aar\4a51dd4d4c5230cd8d83cd4318c037aa\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\jetified-firebase-measurement-connector-impl-16.0.1.aar\4a51dd4d4c5230cd8d83cd4318c037aa\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\jetified-firebase-analytics-16.0.1.aar\da9f587fb8fc7c6a6788c80f9ba4ef7f\AndroidManifest.xml:23:5-67
@@ -98,9 +98,9 @@ MERGED from [com.google.firebase:firebase-database-connection:16.0.1] C:\Users\p
 MERGED from [com.google.firebase:firebase-storage-common:16.0.1] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\jetified-firebase-storage-common-16.0.1.aar\99fad8afc257c84c89f0dcb001c7d8a7\AndroidManifest.xml:8:5-67
 MERGED from [com.google.firebase:firebase-storage-common:16.0.1] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\jetified-firebase-storage-common-16.0.1.aar\99fad8afc257c84c89f0dcb001c7d8a7\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:7:5-38:19
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:7:5-38:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\22bce6ca6e49f348493897ca8d92ba8f\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\22bce6ca6e49f348493897ca8d92ba8f\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d91a82967b108a3e759cfb898c140ae2\AndroidManifest.xml:22:5-20
@@ -146,87 +146,87 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Us
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\ed715464a6a41cd076e91a7bc4c76fb2\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.kmutteats.srinuan.firebasekmutteat.MainActivity
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:14:19-47
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:14:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:18:27-74
 activity#com.kmutteats.srinuan.firebasekmutteat.Forgetpass
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:21:9-48
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:21:9-48
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:21:19-45
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:21:19-45
 activity#com.kmutteats.srinuan.firebasekmutteat.Testsignincomplete
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:22:9-56
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:22:9-56
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:22:19-53
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:22:19-53
 activity#com.kmutteats.srinuan.firebasekmutteat.register
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:23:9-46
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:23:9-46
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:23:19-43
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:23:19-43
 activity#com.kmutteats.srinuan.firebasekmutteat.MerchantTest
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:24:9-50
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:24:9-50
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:24:19-47
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:24:19-47
 activity#com.kmutteats.srinuan.firebasekmutteat.CustomerTest
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:25:9-50
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:25:9-50
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:25:19-47
 activity#com.kmutteats.srinuan.firebasekmutteat.Customview
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:26:9-48
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:26:9-48
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:26:19-45
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:26:19-45
 activity#com.kmutteats.srinuan.firebasekmutteat.Homecustumer
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:27:9-30:47
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:27:9-30:47
 	android:label
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:29:13-64
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:29:13-64
 	android:theme
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:30:13-44
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:30:13-44
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:28:13-41
 activity#com.kmutteats.srinuan.firebasekmutteat.CreateRes
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:31:9-47
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:31:9-47
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:31:19-44
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:31:19-44
 activity#com.kmutteats.srinuan.firebasekmutteat.menulist
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:32:9-46
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:32:9-46
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:32:19-43
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:32:19-43
 activity#com.kmutteats.srinuan.firebasekmutteat.addmenu
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:33:9-45
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:33:9-45
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:33:19-42
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:33:19-42
 activity#com.kmutteats.srinuan.firebasekmutteat.Homemerchant
-ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:34:9-37:56
+ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:34:9-37:56
 	android:label
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:36:13-64
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:36:13-64
 	android:theme
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:37:13-44
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:37:13-44
 	android:name
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:35:13-41
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml:35:13-41
 uses-sdk
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\df55d2c0df81523fe5bb3f6f54200cc2\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\df55d2c0df81523fe5bb3f6f54200cc2\AndroidManifest.xml:20:5-43
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\22bce6ca6e49f348493897ca8d92ba8f\AndroidManifest.xml:5:5-7:41
@@ -351,16 +351,16 @@ MERGED from [com.google.firebase:protolite-well-known-types:15.0.0] C:\Users\pro
 MERGED from [com.google.firebase:protolite-well-known-types:15.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-15.0.0.aar\5ba70b457e03a84d1a09028bd2c69cd7\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\490b9a0e144d8764d8a5aab41ddd55d9\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\490b9a0e144d8764d8a5aab41ddd55d9\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\proy\AndroidStudioProjects\statustestKMUTTEAT\app\src\main\AndroidManifest.xml
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:16.0.1] C:\Users\proy\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.0.1.aar\e3a5af846bec9d9bb1e51ef9779df73c\AndroidManifest.xml:23:9-29:75
 	android:excludeFromRecents
