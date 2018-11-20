@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.instrumentation.stats.Tag;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -21,12 +23,15 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
     private static final String TAG = "RecycleviewLOG";
     HomeCFragment recyclerview;
     ArrayList<User> userArrayList;
-    ArrayList<Integer> iconadapter;
+    //String URL;
+    //ArrayList<Integer> iconadapter;
 
-    public MyRecyclerviewAdapter(HomeCFragment recyclerview, ArrayList<User> userArrayList,ArrayList<Integer> icon) {
+    public MyRecyclerviewAdapter(HomeCFragment recyclerview, ArrayList<User> userArrayList) {
         this.recyclerview = recyclerview;
         this.userArrayList = userArrayList;
-        this.iconadapter = icon;
+        //this.URL = url;
+        //this.iconadapter = icon;
+
     }
 
     @NonNull
@@ -45,7 +50,8 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
         holder.mUserstatus.setText(userArrayList.get(position).getUserstatus());
         holder.mLocation.setText(userArrayList.get(position).getLocation());
         holder.mPhonenum.setText(userArrayList.get(position).getPhonenum());
-        holder.mPicres.setImageResource(iconadapter.get(position));
+        //holder.mUrl.setText(userArrayList.get(position).getUrl());
+        Picasso.get().load(userArrayList.get(position).getUrl()).resize(250,250).centerCrop().into(holder.mPicres);
         holder.mDel.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -55,6 +61,8 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
             }
         });
     }
+
+
 
     private void deleteSelectRow(int position) {
         recyclerview.db.collection("Restaurant")
@@ -80,4 +88,8 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
     public int getItemCount() {
         return userArrayList.size();
     }
+
+
 }
+
+

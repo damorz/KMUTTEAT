@@ -16,6 +16,12 @@
             android:id="@+id/nav_coin"
             android:icon="@drawable/ic_coin"
             android:title="@string/coin" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+
     </group>
 
 

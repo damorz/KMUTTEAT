@@ -10,20 +10,21 @@ public class User {
     String location;
     String userId;
     String phonenum;
-    String statusOF;   //status test
+    String url;
     ImageView picres;
 
-    //status test line 17
-    public User(String userId,String username,String userstatus,String location,String phonenum,String statusOF)
+
+    public User(String userId,String username,String userstatus,String location,String phonenum,String url)
     {
         setUserId(userId);
         this.username = username;
         this.userstatus = userstatus;
         this.location = location;
-        this.picres = picres;
         this.phonenum = phonenum;
-        this.statusOF = statusOF;   //status test
+        this.url = url;
+        this.picres = picres;
     }
+
 
 
 
@@ -87,11 +88,11 @@ public class User {
 
 
     //status test
-    public String getStatusOF() {
-        return statusOF;
+    public String getUrl() {
+        return url;
     }
 
-    public void setStatusOF(String statusOF) {
-        this.statusOF = statusOF;
+    public void setUrl(String statusOF) {
+        this.url = statusOF;
     }
 }

@@ -9,6 +9,8 @@ import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -23,12 +25,15 @@ import android.view.MenuItem;
 public class Homecustumer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homecustumer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -53,6 +58,7 @@ public class Homecustumer extends AppCompatActivity
 
         navigationView.setCheckedItem(R.id.nav_home);
     }
+
     public void setActionBarTitle(String title) { getSupportActionBar().setTitle(title);}
 
     @Override
@@ -95,14 +101,20 @@ public class Homecustumer extends AppCompatActivity
             FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.Flmain,new HomeCFragment());
             ft.commit();
-        } else if (id == R.id.nav_history) {
+        }
+        else if (id == R.id.nav_history) {
             FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.Flmain,new HistoryFragment());
             ft.commit();
-        } else if (id == R.id.nav_coin) {
+        }
+        else if (id == R.id.nav_coin) {
             FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.Flmain,new CoinFragment());
             ft.commit();
+        }
+        else if (id == R.id.nav_logout) {
+            mAuth.signOut();
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

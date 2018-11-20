@@ -147,6 +147,11 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.kmutteats.srinuan.firebasekmutteat.com.squareup.picasso"
+            android:exported="false" />
     </application>
 
 </manifest>

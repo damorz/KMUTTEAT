@@ -1,6 +1,7 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -41,6 +43,7 @@ public class HomeCFragment extends Fragment {
     RecyclerView mRecyclerView;
     ArrayList<User> userArrayList;
     MyRecyclerviewAdapter adapter;
+    MyRecyclerviewHolder holder;
     Button updatabtn;
 
 
@@ -63,10 +66,14 @@ public class HomeCFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+
+
+
         //setUpFirebase();
         db = FirebaseFirestore.getInstance();
-
         loadDataFromFirebase();
+
+
 
         //setupUpdateButton();
         updatabtn = view.findViewById(R.id.mUpdatebt);
@@ -104,7 +111,10 @@ public class HomeCFragment extends Fragment {
             userArrayList.clear();
 
 
-
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setTitle("Loading Restaurant");
+        progressDialog.setMessage("Loading . . .");
+        progressDialog.show();
         db.collection("Restaurant")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -112,21 +122,20 @@ public class HomeCFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         for(DocumentSnapshot querySnapshot: task.getResult())
                         {
+
                             User user = new User(querySnapshot.getId(),
                                     querySnapshot.getString("Restaurant name"),
                                     querySnapshot.getString("Description"),
                                     querySnapshot.getString("Location"),
                                     querySnapshot.getString("Phone number"),
-                                    querySnapshot.getString("StatusOF")); //status test
+                                    querySnapshot.getString("URL")); //status test
 
                             userArrayList.add(user);
                         }
-                        final ArrayList<Integer> icon = new ArrayList<>();
-                        for (int i = 0; i <= userArrayList.size(); i++) {
-                            icon.add(R.drawable.ic_preimage);
-                        }
-                        adapter = new MyRecyclerviewAdapter(HomeCFragment.this,userArrayList,icon);
+
+                        adapter = new MyRecyclerviewAdapter(HomeCFragment.this,userArrayList);
                         mRecyclerView.setAdapter(adapter);
+                        progressDialog.dismiss();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

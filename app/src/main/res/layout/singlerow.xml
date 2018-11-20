@@ -20,8 +20,9 @@
 
             <ImageView
                 android:id="@+id/mPicres"
-                android:layout_width="196dp"
-                android:layout_height="match_parent"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
                 android:layout_weight="10"
                 app:srcCompat="@drawable/ic_preimage"
                 tools:ignore="VectorDrawableCompat" />
@@ -37,6 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
+                    android:layout_marginTop="15dp"
                     android:text="Name"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textColor="#EB6B03"
@@ -47,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
+                    android:layout_marginTop="4dp"
                     android:text="Description"
                     android:textColor="#708090" />
 
@@ -55,6 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
+                    android:layout_marginTop="4dp"
                     android:text="Phone number"
                     android:textColor="#708090" />
 
@@ -62,6 +66,7 @@
                     android:id="@+id/mLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:drawableLeft="@drawable/ic_location_on_black_24dp"
                     android:text="Location"
                     android:textColor="#EB6B03"

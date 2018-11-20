@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity
     private EditText mEmail, mPassword;
     private CardView btnSignIn,creatwaccbtn;
     private TextView forgerpassbtn;
-    private Button checkbtn;
+    private ImageView logo;
     public static final String STATUS_KEY = "Status";
     public static final String USERNAME_KEY = "Username";
     public static final String PHONE_KEY = "Phone";
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity
         btnSignIn = (CardView) findViewById(R.id.signin1);
         creatwaccbtn = (CardView) findViewById(R.id.createacc);
         forgerpassbtn = (TextView) findViewById(R.id.forgetpass);
-        checkbtn = (Button) findViewById(R.id.CheckFGbt);
+        logo = (ImageView) findViewById(R.id.imageView);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -145,10 +146,10 @@ public class MainActivity extends AppCompatActivity
 
 
         });
-        checkbtn.setOnClickListener(new View.OnClickListener() {
+        logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent y = new Intent(MainActivity.this,Homemerchant.class);  ///////////////////////////////////////////// !!!!!!! อันนี้เป็นปุ่มเทสที่อยู่บนสุดของหน้าแรก
+                Intent y = new Intent(MainActivity.this,Homecustumer.class);  ///////////////////////////////////////////// !!!!!!! อันนี้เป็นปุ่มเทสที่อยู่บนสุดของหน้าแรก
                 startActivity(y);
             }
         });

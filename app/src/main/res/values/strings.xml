@@ -15,4 +15,5 @@
     <string name="coin">Coin</string>
     <string name="home">Home</string>
     <string name="title_activity_homemerchant">Homemerchant</string>
+    <string name="logout">Logout</string>
 </resources>

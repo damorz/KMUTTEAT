@@ -1186,6 +1186,7 @@ drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_location_on_black_24dp
+drawable ic_logout
 drawable ic_media_pause_dark
 drawable ic_media_pause_light
 drawable ic_media_play_dark
@@ -1386,7 +1387,6 @@ drawable user
 drawable users
 id ALT
 id CTRL
-id CheckFGbt
 id Colum
 id Delbt
 id FUNCTION
@@ -1609,6 +1609,7 @@ id nav_history
 id nav_historyM
 id nav_home
 id nav_homeM
+id nav_logout
 id nav_orderM
 id nav_view
 id navigation_header_container
@@ -1966,6 +1967,7 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string history
 string home
+string logout
 string mr_button_content_description
 string mr_cast_button_connected
 string mr_cast_button_connecting
