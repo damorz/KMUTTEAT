@@ -17,6 +17,7 @@ public class menulist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menulist);
         addmenu = (FloatingActionButton)findViewById(R.id.addmenu);
+
         Intent getnameres = getIntent();
         final String nameres = getnameres.getStringExtra( "nr" );
 

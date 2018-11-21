@@ -74,7 +74,7 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
 
         //holder.mUrl.setText(userArrayList.get(position).getUrl());
         //Picasso.get().load(userArrayList.get(position).getUrl()).resize(250,250).centerCrop().into(holder.mPicres);
-        Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrl()).apply(requestOptions.centerCrop().override(250,250)).into(holder.mPicres);
+        Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrl()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicres);
 
         holder.mDel.setOnClickListener(new View.OnClickListener()
         {

@@ -17,19 +17,24 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.Placeholder;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static android.os.SystemClock.sleep;
 
 public class Homemerchant extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -55,16 +60,50 @@ public class Homemerchant extends AppCompatActivity
 
         Intent _recievemail = getIntent();
         final String email = _recievemail.getStringExtra("mail");
+        Intent _recievenameres = getIntent();
+        final String nameres = _recievenameres.getStringExtra("nr");
         Intent _recievestatus = getIntent();
         final String statuscheck = _recievestatus.getStringExtra("statuscheck");
+        Toast.makeText(this,nameres, Toast.LENGTH_SHORT).show();
 
         //defalt fragment for homeM
-        FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.Flmain2,new HomeMFragment());
         ft.commit();
 
         navigationView2.setCheckedItem(R.id.nav_homeM); //no2
+
         statusOF();
+
+        db.collection("account").document("MERCHANT").collection(email).document("data account")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>()
+                {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot)
+                    {
+                        if(documentSnapshot.exists())
+                        {
+                            final String _nameres = documentSnapshot.getString("Restaurant name");
+                            Toast.makeText(Homemerchant.this,"First : "+_nameres,Toast.LENGTH_SHORT).show();
+                            sleep(500);
+                            Bundle bundle = new Bundle();
+                            bundle.putString("edttext", _nameres);
+                            HomeMFragment mnlname = new HomeMFragment();
+                            mnlname.setArguments(bundle);
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG,"Document fail to loaded");
+                    }
+                });
+//        HomeMFragment m = new HomeMFragment();
+//        m.setname("Test");
+
+
     }
     public void setActionBarTitle(String title) { getSupportActionBar().setTitle(title);}
 
@@ -77,6 +116,8 @@ public class Homemerchant extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,6 +137,9 @@ public class Homemerchant extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         return super.onOptionsItemSelected( item );
     }
+
+
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

@@ -2,6 +2,8 @@ package com.kmutteats.srinuan.firebasekmutteat;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -37,6 +39,7 @@ import static com.kmutteats.srinuan.firebasekmutteat.register.STATUS_KEY;
 
 public class CreateRes extends AppCompatActivity
 {
+
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseFirestore db2 = FirebaseFirestore.getInstance();
@@ -171,6 +174,8 @@ public class CreateRes extends AppCompatActivity
 
                                         Intent _recievemail = getIntent();
                                         final String email = _recievemail.getStringExtra("mail");
+                                        Intent _recievestatus = getIntent();
+                                        final String statuscheck = _recievestatus.getStringExtra("statuscheck");
                                         Map<String, Object> info2 = new HashMap<>();
                                         info2.put("Restaurant name",nr);
                                         info2.put("Status","Merchant");
@@ -178,9 +183,16 @@ public class CreateRes extends AppCompatActivity
                                                 .set(info2,SetOptions.merge());
 
 
-                                        Intent intent = new Intent(CreateRes.this, menulist.class);
-                                        intent.putExtra("nr", nameres.getText().toString());
+                                        //Intent intent = new Intent(CreateRes.this, menulist.class);
+                                        Intent intent = new Intent(CreateRes.this,menulist.class);
+                                        intent.putExtra("nr", nr);
+                                        intent.putExtra("mail",email);
+                                        intent.putExtra("statuscheck",statuscheck);
                                         startActivity(intent);
+
+
+
+
 
                                     }
                                 });
