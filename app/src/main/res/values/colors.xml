@@ -2,4 +2,6 @@
 <resources>
     <color name="colorPrimary">#eb6b03</color>
     <color name="colorAccent">#ffffff</color>
+    <color name="On">#63cc2e</color>
+    <color name="Off">#f5220d</color>
 </resources>

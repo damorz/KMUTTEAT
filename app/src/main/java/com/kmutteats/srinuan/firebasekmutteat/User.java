@@ -10,11 +10,12 @@ public class User {
     String location;
     String userId;
     String phonenum;
+    String OnOff;
     String url;
     ImageView picres;
 
 
-    public User(String userId,String username,String userstatus,String location,String phonenum,String url)
+    public User(String userId,String username,String userstatus,String location,String phonenum,String url,String OnOff)
     {
         setUserId(userId);
         this.username = username;
@@ -22,11 +23,18 @@ public class User {
         this.location = location;
         this.phonenum = phonenum;
         this.url = url;
+        this.OnOff = OnOff;
         this.picres = picres;
     }
 
 
+    public String getOnOff() {
+        return OnOff;
+    }
 
+    public void setOnOff(String onOff) {
+        OnOff = onOff;
+    }
 
     public String getPhonenum() {
         return phonenum;
@@ -87,12 +95,12 @@ public class User {
     }
 
 
-    //status test
+
     public String getUrl() {
         return url;
     }
 
-    public void setUrl(String statusOF) {
-        this.url = statusOF;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -165,6 +165,7 @@ public class CreateRes extends AppCompatActivity
                                         info.put("Description", dct);
                                         info.put("Location", selectedText);
                                         info.put("URL", link);
+                                        //info.put("Status RES","closed");
                                         db.collection("Restaurant").document(nr)
                                                 .set(info);
 

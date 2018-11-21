@@ -8,7 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +61,7 @@ public class HomeCFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home_c, container, false);
         // Inflate the layout for this fragment
 
+
         userArrayList = new ArrayList<>();
 
         //setUpRecycleView();
@@ -87,9 +90,9 @@ public class HomeCFragment extends Fragment {
 
 
 
-
         return view;
     }
+
 
     /*private void setupUpdateButton() {
 
@@ -128,8 +131,8 @@ public class HomeCFragment extends Fragment {
                                     querySnapshot.getString("Description"),
                                     querySnapshot.getString("Location"),
                                     querySnapshot.getString("Phone number"),
-                                    querySnapshot.getString("URL")); //status test
-
+                                    querySnapshot.getString("URL"),
+                                    querySnapshot.getString("Status RES")); //status test
                             userArrayList.add(user);
                         }
 

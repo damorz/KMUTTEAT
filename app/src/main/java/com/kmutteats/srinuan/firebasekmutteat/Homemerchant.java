@@ -3,13 +3,20 @@ package com.kmutteats.srinuan.firebasekmutteat;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
+import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -19,9 +26,16 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Switch;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Homemerchant extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String TAG = "LOGHomeMerchant";
+    FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +64,7 @@ public class Homemerchant extends AppCompatActivity
         ft.commit();
 
         navigationView2.setCheckedItem(R.id.nav_homeM); //no2
+        statusOF();
     }
     public void setActionBarTitle(String title) { getSupportActionBar().setTitle(title);}
 
@@ -67,6 +82,7 @@ public class Homemerchant extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate( R.menu.homemerchant, menu );
+        statusOF();
         return true;
     }
 
@@ -108,6 +124,62 @@ public class Homemerchant extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );
         drawer.closeDrawer( GravityCompat.START );
+
         return true;
+    }
+
+    public void statusOF()
+    {
+        db = FirebaseFirestore.getInstance();
+        Intent _recievemail = getIntent();
+        final String email = _recievemail.getStringExtra("mail");
+        Intent _recievestatus = getIntent();
+        final String statuscheck = _recievestatus.getStringExtra("statuscheck");
+        db.collection("account").document("MERCHANT").collection(email).document("data account")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>()
+                {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot)
+                    {
+                        if(documentSnapshot.exists())
+                        {
+                            final String nameres = documentSnapshot.getString("Restaurant name");
+                            final Switch SWstatusOF=(Switch)findViewById(R.id.SWstatusOF);
+                            SWstatusOF.setOnClickListener( new View.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(View v)
+                                {
+                                    Map<String, Object> info = new HashMap<>();
+                                    if (SWstatusOF.isChecked()==true)
+                                    {
+                                        String statusOF ="now open";
+                                        info.put("Status RES",statusOF);
+                                    }
+                                    else
+                                    {
+                                        String statusOF = "closed";
+                                        info.put("Status RES",statusOF);
+                                    }
+                                    db.collection("Restaurant").document(nameres)
+                                            .set(info,SetOptions.merge());
+                                }
+
+
+                            });
+
+                            //Status.setText();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG,"Document fail to loaded");
+                    }
+                });
+
+
     }
 }
