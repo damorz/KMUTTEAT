@@ -1614,6 +1614,7 @@ id nav_historyM
 id nav_home
 id nav_homeM
 id nav_logout
+id nav_logout2
 id nav_orderM
 id nav_view
 id navigation_header_container
@@ -1707,6 +1708,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id test
+id testnameres
 id text
 id text2
 id textSpacerNoButtons
@@ -2008,6 +2010,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string refresh
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_homecustumer

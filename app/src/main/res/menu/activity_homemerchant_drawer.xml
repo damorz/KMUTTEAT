@@ -20,6 +20,11 @@
             android:id="@+id/nav_coinM"
             android:icon="@drawable/ic_coin"
             android:title="Coin" />
+
+        <item
+            android:id="@+id/nav_logout2"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
     </group>
 
 

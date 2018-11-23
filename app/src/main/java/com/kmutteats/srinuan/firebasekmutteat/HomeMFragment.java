@@ -10,9 +10,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -22,13 +25,18 @@ public class HomeMFragment extends Fragment {
 
 
     private FloatingActionButton addmenu;
+    private TextView testtext;
 
     public HomeMFragment() {
+
+
         // Required empty public constructor
     }
 
     public void setname(String text){
         System.out.println(text);
+
+
     }
 
     @Override
@@ -36,11 +44,10 @@ public class HomeMFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_m, container, false);
+
         addmenu = (FloatingActionButton)view.findViewById(R.id.addmenuFG);
-        if(getArguments()!=null){
-            String nameres = getArguments().getString("edttext");
-            Toast.makeText(getActivity().getApplicationContext(),nameres,Toast.LENGTH_SHORT).show();
-        }
+        testtext = (TextView) view.findViewById(R.id.testnameres);
+
 
 
 
@@ -50,12 +57,18 @@ public class HomeMFragment extends Fragment {
         addmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nameres = getArguments().getString("edttext");
-                Intent i = new Intent(getActivity(),addmenu.class);
-                i.putExtra("nr2",nameres);
-                startActivity(i);
+                Bundle bundle = getArguments();
+                if (bundle!=null) {
+                    String nameres = bundle.getString("res");
+                    //Toast.makeText(getActivity().getApplicationContext(), "Home M !!!!!!!!!!! ! : " + nameres, Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getActivity(),addmenu.class);
+                    i.putExtra("nr2",nameres);
+                    startActivity(i);
+                }
+
             }
         });
+
         return view;
     }
 

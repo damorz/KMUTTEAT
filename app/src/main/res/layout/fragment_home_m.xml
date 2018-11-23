@@ -14,33 +14,6 @@
         tools:context=".menulist">
 
 
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="500dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            app:cardBackgroundColor="#eb6b03"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" >
-
-            <RelativeLayout
-                android:id="@+id/head"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:text="Menu List"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addmenuFG"
             android:layout_width="80dp"
@@ -55,6 +28,18 @@
             android:focusable="true"
             app:backgroundTint="#eb6b03"
             app:srcCompat="@drawable/add_menu" />
+
+        <TextView
+            android:id="@+id/testnameres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="157dp"
+            android:layout_marginLeft="157dp"
+            android:layout_marginTop="79dp"
+            android:text="TextView" />
 
 
     </RelativeLayout>

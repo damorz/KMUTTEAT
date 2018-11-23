@@ -193,6 +193,7 @@ public class MainActivity extends AppCompatActivity
                             final String username = documentSnapshot.getString(USERNAME_KEY);
                             final String phonenum = documentSnapshot.getString(PHONE_KEY);
                             final String statuscheck = documentSnapshot.getString(STATUS_KEY);
+                            final String nameres = documentSnapshot.getString("Restaurant name");
 
                         }
                     }
@@ -251,6 +252,7 @@ public class MainActivity extends AppCompatActivity
                                 final String username = documentSnapshot.getString(USERNAME_KEY);
                                 final String phonenum = documentSnapshot.getString(PHONE_KEY);
                                 final String statuscheck = documentSnapshot.getString(STATUS_KEY);
+                                final String nameres = documentSnapshot.getString("Restaurant name");
                                 if(statuscheck.equals("Merchant0"))
                                 {
                                     Intent i = new Intent(MainActivity.this,CreateRes.class);
@@ -269,6 +271,7 @@ public class MainActivity extends AppCompatActivity
                                 {
                                     Intent k = new Intent(MainActivity.this,Homemerchant.class); ////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
                                     k.putExtra("mail",email);
+                                    k.putExtra("nr",nameres);
                                     k.putExtra("statuscheck",statuscheck);
                                     startActivity(k);
                                 }
@@ -295,6 +298,7 @@ public class MainActivity extends AppCompatActivity
                                 final String username = documentSnapshot.getString(USERNAME_KEY);
                                 final String phonenum = documentSnapshot.getString(PHONE_KEY);
                                 final String statuscheck = documentSnapshot.getString(STATUS_KEY);
+                                final String nameres = documentSnapshot.getString("Restaurant name");
                                 if(statuscheck.equals("Merchant0"))
                                 {
                                     Intent i = new Intent(MainActivity.this,CreateRes.class);
@@ -313,6 +317,7 @@ public class MainActivity extends AppCompatActivity
                                 {
                                     Intent k = new Intent(MainActivity.this,Homemerchant.class);////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
                                     k.putExtra("mail",email);
+                                    k.putExtra("nr",nameres);
                                     k.putExtra("statuscheck",statuscheck);
                                     startActivity(k);
                                 }

@@ -62,6 +62,7 @@ public class addmenu extends AppCompatActivity {
         final String nameres = getnameres.getStringExtra( "nr2" );
         addnow = (Button)findViewById(R.id.cfadd);
 
+        //Toast.makeText(addmenu.this,"Complete ละโว้ย : "  + nameres,Toast.LENGTH_SHORT).show();
         final EditText name ,price,dct;
         name = (EditText)findViewById(R.id.editText);
         price = (EditText)findViewById(R.id.editText2);
@@ -135,7 +136,8 @@ public class addmenu extends AppCompatActivity {
                                     menu.put("Description",description);
                                     menu.put("URL",link);
 
-                                    db.collection("Menu").document(nameres).collection(foodname).document("Menu(link)")
+                                    //db.collection("Menu").document(nameres).collection(foodname).document("Menu(link)")
+                                      db.collection("Menu").document("Link").collection(nameres).document(foodname)
                                             .set(menu);
 
                                     finish();

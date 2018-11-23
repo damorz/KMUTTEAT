@@ -16,7 +16,10 @@
             android:id="@+id/mUpdatebt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/update" />
+            android:text="@string/refresh"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:background="#eb6b03" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/mRecyclerview"

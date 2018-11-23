@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
@@ -24,6 +25,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
@@ -41,6 +43,7 @@ public class Homemerchant extends AppCompatActivity
 
     private static final String TAG = "LOGHomeMerchant";
     FirebaseFirestore db;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,18 +67,28 @@ public class Homemerchant extends AppCompatActivity
         final String nameres = _recievenameres.getStringExtra("nr");
         Intent _recievestatus = getIntent();
         final String statuscheck = _recievestatus.getStringExtra("statuscheck");
-        Toast.makeText(this,nameres, Toast.LENGTH_SHORT).show();
+
+
+
+
+
+        Toast.makeText(Homemerchant.this,"Homemerchant : "+nameres,Toast.LENGTH_SHORT).show();
 
         //defalt fragment for homeM
+
+        Bundle bundle = new Bundle();
+        bundle.putString("res", nameres);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.Flmain2,new HomeMFragment());
+        HomeMFragment homeMFragment = new HomeMFragment();
+        homeMFragment.setArguments(bundle);
+        ft.replace(R.id.Flmain2,homeMFragment);
         ft.commit();
 
         navigationView2.setCheckedItem(R.id.nav_homeM); //no2
 
         statusOF();
 
-        db.collection("account").document("MERCHANT").collection(email).document("data account")
+        /*db.collection("account").document("MERCHANT").collection(email).document("data account")
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>()
                 {
@@ -84,14 +97,12 @@ public class Homemerchant extends AppCompatActivity
                     {
                         if(documentSnapshot.exists())
                         {
-                            final String _nameres = documentSnapshot.getString("Restaurant name");
-                            Toast.makeText(Homemerchant.this,"First : "+_nameres,Toast.LENGTH_SHORT).show();
-                            sleep(500);
-                            Bundle bundle = new Bundle();
-                            bundle.putString("edttext", _nameres);
-                            HomeMFragment mnlname = new HomeMFragment();
-                            mnlname.setArguments(bundle);
-                        }
+                            final String _nameres = documentSnapshot.getString("Restaurant name");*/
+
+
+
+
+                        /*}
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -99,7 +110,7 @@ public class Homemerchant extends AppCompatActivity
                     public void onFailure(@NonNull Exception e) {
                         Log.w(TAG,"Document fail to loaded");
                     }
-                });
+                });*/
 //        HomeMFragment m = new HomeMFragment();
 //        m.setname("Test");
 
@@ -145,6 +156,7 @@ public class Homemerchant extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        mAuth = FirebaseAuth.getInstance();
         int id = item.getItemId();
 
         if (id == R.id.nav_homeM) {
@@ -164,6 +176,10 @@ public class Homemerchant extends AppCompatActivity
             FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.Flmain2,new CoinMFragment());
             ft.commit();
+        }
+        else if (id == R.id.nav_logout2) {
+            mAuth.signOut();
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );

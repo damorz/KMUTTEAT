@@ -168,7 +168,7 @@ public class CreateRes extends AppCompatActivity
                                         info.put("Description", dct);
                                         info.put("Location", selectedText);
                                         info.put("URL", link);
-                                        //info.put("Status RES","closed");
+                                        info.put("Status RES","closed");
                                         db.collection("Restaurant").document(nr)
                                                 .set(info);
 
@@ -184,7 +184,7 @@ public class CreateRes extends AppCompatActivity
 
 
                                         //Intent intent = new Intent(CreateRes.this, menulist.class);
-                                        Intent intent = new Intent(CreateRes.this,menulist.class);
+                                        Intent intent = new Intent(CreateRes.this,Homemerchant.class);
                                         intent.putExtra("nr", nr);
                                         intent.putExtra("mail",email);
                                         intent.putExtra("statuscheck",statuscheck);

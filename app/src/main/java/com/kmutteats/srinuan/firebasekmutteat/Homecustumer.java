@@ -94,6 +94,7 @@ public class Homecustumer extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        mAuth = FirebaseAuth.getInstance();
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
