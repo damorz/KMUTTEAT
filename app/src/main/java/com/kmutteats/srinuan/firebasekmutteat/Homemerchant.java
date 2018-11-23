@@ -30,6 +30,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Adapter;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -75,6 +76,9 @@ public class Homemerchant extends AppCompatActivity
         Toast.makeText(Homemerchant.this,"Homemerchant : "+nameres,Toast.LENGTH_SHORT).show();
 
         //defalt fragment for homeM
+
+        Intent k = new Intent(Homemerchant.this,MyRecyclerviewAdapterMenu.class);
+        k.putExtra("NameResMenu",nameres);
 
         Bundle bundle = new Bundle();
         bundle.putString("res", nameres);
@@ -159,10 +163,18 @@ public class Homemerchant extends AppCompatActivity
         mAuth = FirebaseAuth.getInstance();
         int id = item.getItemId();
 
+        Intent _recievenameres = getIntent();
+        final String nameres = _recievenameres.getStringExtra("nr");
+
         if (id == R.id.nav_homeM) {
             // Handle the camera action
-            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.Flmain2,new HomeMFragment());
+
+            Bundle bundle = new Bundle();
+            bundle.putString("res", nameres);
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            HomeMFragment homeMFragment = new HomeMFragment();
+            homeMFragment.setArguments(bundle);
+            ft.replace(R.id.Flmain2,homeMFragment);
             ft.commit();
         } else if (id == R.id.nav_orderM) {
             FragmentTransaction ft=getSupportFragmentManager().beginTransaction();

@@ -1335,6 +1335,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_orderlist
 drawable ic_preimage
+drawable ic_price
 drawable ic_vol_type_speaker_dark
 drawable ic_vol_type_speaker_group_dark
 drawable ic_vol_type_speaker_group_light
@@ -1391,6 +1392,7 @@ id ALT
 id CTRL
 id Colum
 id Delbt
+id Delbtmenu
 id FUNCTION
 id Flmain
 id Flmain2
@@ -1543,13 +1545,19 @@ id linear
 id listMode
 id list_item
 id location
+id mDescription
 id mLocation
+id mNamemenu
 id mOnOff
 id mPhonenum
+id mPicmenu
 id mPicres
+id mPrice
 id mRecyclerview
+id mRecyclerviewmenu
 id mStatus
 id mUpdatebt
+id mUpdatebtmenu
 id mUsername
 id mailregis
 id masked
@@ -1708,7 +1716,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id test
-id testnameres
 id text
 id text2
 id textSpacerNoButtons
@@ -1886,6 +1893,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout single_row_menu
 layout singlerow
 layout support_simple_spinner_dropdown_item
 menu activity_homecustumer_drawer

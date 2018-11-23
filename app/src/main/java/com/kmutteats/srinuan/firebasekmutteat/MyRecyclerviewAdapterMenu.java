@@ -1,11 +1,12 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -13,50 +14,42 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.instrumentation.stats.Tag;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHolder> {
-
+public class MyRecyclerviewAdapterMenu extends RecyclerView.Adapter<MyRecyclerviewHolderMenu>
+{
     private static final String TAG = "RecycleviewLOG";
-    HomeCFragment recyclerview;
-    ArrayList<User> userArrayList;
-    //String URL;
-    //ArrayList<Integer> iconadapter;
+    HomeMFragment recyclerview;
+    ArrayList<Menu> userArrayList;
 
-    public MyRecyclerviewAdapter(HomeCFragment recyclerview, ArrayList<User> userArrayList) {
+    public MyRecyclerviewAdapterMenu(HomeMFragment recyclerview, ArrayList<Menu> userArrayList) {
         this.recyclerview = recyclerview;
         this.userArrayList = userArrayList;
         //this.URL = url;
         //this.iconadapter = icon;
-
     }
 
     @NonNull
     @Override
-    public MyRecyclerviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyRecyclerviewHolderMenu onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(recyclerview.getActivity().getApplicationContext());
-        View view =layoutInflater.inflate(R.layout.singlerow,parent,false );
-        return new MyRecyclerviewHolder(view);
+        View view =layoutInflater.inflate(R.layout.single_row_menu,parent,false );
+        return new MyRecyclerviewHolderMenu(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyRecyclerviewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull MyRecyclerviewHolderMenu holder, final int position) {
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.diskCacheStrategy(DiskCacheStrategy.RESOURCE);
-        holder.mUsername.setText(userArrayList.get(position).getUsername());
-        holder.mUserstatus.setText(userArrayList.get(position).getUserstatus());
-        holder.mLocation.setText(userArrayList.get(position).getLocation());
-        holder.mPhonenum.setText(userArrayList.get(position).getPhonenum());
-        holder.mOnOff.setTextColor(Color.parseColor("#eb6b03"));
-        holder.mOnOff.setText(userArrayList.get(position).getOnOff());
+        holder.mNamemenu.setText(userArrayList.get(position).getNamemenu());
+        holder.mDescription.setText(userArrayList.get(position).getDescrip());
+        holder.mPrice.setText(userArrayList.get(position).getPrice());
 
         /*String close = "closed";
         if(userArrayList.get(position).getOnOff()==close)
@@ -73,9 +66,9 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
 
         //holder.mUrl.setText(userArrayList.get(position).getUrl());
         //Picasso.get().load(userArrayList.get(position).getUrl()).resize(250,250).centerCrop().into(holder.mPicres);
-        Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrl()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicres);
+        Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrl()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicMenu);
 
-        holder.mDel.setOnClickListener(new View.OnClickListener()
+        holder.mDelM.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -85,10 +78,10 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
         });
     }
 
-
-
-    private void deleteSelectRow(int position) {
-        recyclerview.db.collection("Restaurant")
+    private void deleteSelectRow(int position)
+    {
+        String nameres = userArrayList.get(position).getNameresmenu();
+        recyclerview.db.collection("Menu").document("Link").collection(nameres)
                 .document(userArrayList.get(position).getUserId())
                 .delete()
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -112,7 +105,4 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
         return userArrayList.size();
     }
 
-
 }
-
-

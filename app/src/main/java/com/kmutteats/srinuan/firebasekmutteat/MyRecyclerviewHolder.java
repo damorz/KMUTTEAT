@@ -14,6 +14,8 @@ public class MyRecyclerviewHolder extends RecyclerView.ViewHolder
     public ImageView mPicres;
     public TextView mOnOff;
     public Button mDel;
+
+
     public MyRecyclerviewHolder(View itemView)
     {
         super(itemView);

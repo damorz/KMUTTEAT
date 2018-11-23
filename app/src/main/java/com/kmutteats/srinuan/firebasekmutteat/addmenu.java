@@ -132,6 +132,8 @@ public class addmenu extends AppCompatActivity {
                                     link = uri.toString();
 
                                     Map<String,Object> menu = new HashMap<>();
+                                    menu.put("Restaurant name",nameres);
+                                    menu.put("Food name",foodname);
                                     menu.put("Price",prize);
                                     menu.put("Description",description);
                                     menu.put("URL",link);
