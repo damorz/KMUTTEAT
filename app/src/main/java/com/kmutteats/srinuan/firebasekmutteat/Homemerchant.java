@@ -73,7 +73,7 @@ public class Homemerchant extends AppCompatActivity
 
 
 
-        Toast.makeText(Homemerchant.this,"Homemerchant : "+nameres,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(Homemerchant.this,"Homemerchant : "+nameres,Toast.LENGTH_SHORT).show();
 
         //defalt fragment for homeM
 

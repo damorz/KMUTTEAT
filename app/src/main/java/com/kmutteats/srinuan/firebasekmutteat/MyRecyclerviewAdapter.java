@@ -105,12 +105,12 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
 
                 if(isLongClick)
                 {
-                    Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Now Long Click!", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Now Long Click!", Toast.LENGTH_SHORT).show();
                 }
 
                 else
                 {
-                    Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Name Res : "+userArrayList.get(position).getUsername(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Name Res : "+userArrayList.get(position).getUsername(), Toast.LENGTH_SHORT).show();
                     Bundle bundle = new Bundle();
                     bundle.putString("nameresE",userArrayList.get(position).getUsername());
                     ///// Test pass data

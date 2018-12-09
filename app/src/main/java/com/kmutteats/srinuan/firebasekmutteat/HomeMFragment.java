@@ -55,9 +55,6 @@ public class HomeMFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public void setname(String text){
-        System.out.println(text);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
