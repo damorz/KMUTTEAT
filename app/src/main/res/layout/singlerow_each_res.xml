@@ -67,6 +67,16 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btAddtocart"
+                android:layout_width="200dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/ic_addtocart" />
+
 
         </LinearLayout>
 
@@ -74,9 +84,9 @@
             android:id="@+id/lineE"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="10"
-            app:cardBackgroundColor="#e5e7e9"
-            android:layout_marginTop="5dp">
+            app:cardBackgroundColor="#e5e7e9">
 
         </androidx.cardview.widget.CardView>
 

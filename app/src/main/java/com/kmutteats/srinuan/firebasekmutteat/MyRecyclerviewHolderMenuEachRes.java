@@ -13,6 +13,7 @@ public class MyRecyclerviewHolderMenuEachRes extends RecyclerView.ViewHolder
 
     public TextView mNamemenu,mPrice,mDescription,mUrl;
     public ImageView mPicMenu;
+    public Button btaddcart;
     //public Button mDelM;
 
 
@@ -24,6 +25,7 @@ public class MyRecyclerviewHolderMenuEachRes extends RecyclerView.ViewHolder
         mDescription = itemView.findViewById(R.id.mDescriptionE);
         //mUrl = itemView.findViewById(R.id.mUrl);
         mPicMenu = itemView.findViewById(R.id.mPicmenuE);
+        btaddcart = itemView.findViewById( R.id.btAddtocart );
         //mDelM = itemView.findViewById(R.id.Delbtmenu);
 
     }

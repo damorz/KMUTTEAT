@@ -1,11 +1,13 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.preference.PreferenceManager;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +23,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class Homecustumer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,11 +52,22 @@ public class Homecustumer extends AppCompatActivity
         Intent _recievestatus = getIntent();
         final String statuscheck = _recievestatus.getStringExtra("statuscheck");
 
+        //Toast.makeText( this, "mail homecus : "+email, Toast.LENGTH_SHORT ).show();
         //deflat fragment for home
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("Emailtest", email); //InputString: from the EditText
+        editor.commit();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("email", email);
+        HomeCFragment homeCFragment = new HomeCFragment();
+        homeCFragment.setArguments(bundle);
 
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.Flmain, new HomeCFragment());
+        ft.replace(R.id.Flmain, homeCFragment);
         ft.commit();
 
         navigationView.setCheckedItem(R.id.nav_home);

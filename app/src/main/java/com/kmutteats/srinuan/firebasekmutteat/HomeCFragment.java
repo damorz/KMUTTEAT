@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -48,7 +49,6 @@ public class HomeCFragment extends Fragment {
     MyRecyclerviewHolder holder;
     Button updatabtn;
 
-
     public HomeCFragment() {
         // Required empty public constructor
     }
@@ -60,6 +60,13 @@ public class HomeCFragment extends Fragment {
         ((Homecustumer)getActivity()).setActionBarTitle("Home");
         View view = inflater.inflate(R.layout.fragment_home_c, container, false);
         // Inflate the layout for this fragment
+
+        Bundle bundle = getArguments();
+        String email = bundle.getString("email");
+
+        Toast.makeText(getActivity().getApplicationContext(), "mail is  : " +email , Toast.LENGTH_SHORT).show();
+
+
 
 
         userArrayList = new ArrayList<>();

@@ -1,2 +1,2 @@
-# Referenced at C:\Users\ADMIN\AndroidStudioProjects\KMUTTEAT\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:23
+# Referenced at C:\Users\proy\AndroidStudioProjects\KMUTTEAT\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:23
 -keep class androidx.multidex.MultiDexApplication { <init>(...); }

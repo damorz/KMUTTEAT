@@ -1,8 +1,6 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -18,15 +15,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.instrumentation.stats.Tag;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,10 +27,15 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
     private static final String TAG = "RecycleviewLOG";
     HomeCFragment recyclerview;
     ArrayList<User> userArrayList;
+    Homecustumer homecustumer;
+    String email;
     private Context context;
 
     //String URL;
     //ArrayList<Integer> iconadapter;
+
+
+
 
     public MyRecyclerviewAdapter(HomeCFragment recyclerview, ArrayList<User> userArrayList) {
         this.recyclerview = recyclerview;
@@ -110,10 +107,11 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
 
                 else
                 {
-                    //Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Name Res : "+userArrayList.get(position).getUsername(), Toast.LENGTH_SHORT).show();
+
+
                     Bundle bundle = new Bundle();
                     bundle.putString("nameresE",userArrayList.get(position).getUsername());
-                    ///// Test pass data
+
                     MenuEachResFragment menuEachResFragment = new MenuEachResFragment();
                     menuEachResFragment.setArguments(bundle);
                     //// Test pass data

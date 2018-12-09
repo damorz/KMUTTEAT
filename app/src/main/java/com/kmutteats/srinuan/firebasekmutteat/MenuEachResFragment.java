@@ -2,6 +2,7 @@ package com.kmutteats.srinuan.firebasekmutteat;
 
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,11 +57,11 @@ public class MenuEachResFragment extends Fragment {
 
         //////// Test revieve data
         Bundle bundle = getArguments();
-        if (bundle!=null)
-        {
-            String nameresE = bundle.getString("nameresE");
-        }
-        //Toast.makeText(getActivity().getApplicationContext(), "Name Res passed! : " + nameresE, Toast.LENGTH_SHORT).show();
+        String nameresE = bundle.getString("nameresE");
+
+
+
+        //Toast.makeText(getActivity().getApplicationContext(), "menuEach mail is  : " + email, Toast.LENGTH_SHORT).show();
         //////// Tedt recieve data
 
         userArrayList = new ArrayList<>();
@@ -97,6 +99,7 @@ public class MenuEachResFragment extends Fragment {
         Bundle bundle = getArguments();
         if (bundle!=null) {
             String nameresE = bundle.getString("nameresE");
+
             //Toast.makeText(getActivity().getApplicationContext(), "This is menu of : " + nameresE, Toast.LENGTH_SHORT).show();
 
             final ProgressDialog progressDialog = new ProgressDialog(getActivity());

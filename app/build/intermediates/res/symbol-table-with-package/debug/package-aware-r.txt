@@ -1146,6 +1146,7 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_addphoto
+drawable ic_addtocart
 drawable ic_audiotrack_dark
 drawable ic_audiotrack_light
 drawable ic_coin
@@ -1444,6 +1445,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btAddtocart
 id btnregis
 id buttonPanel
 id cancel_action
