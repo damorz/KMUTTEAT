@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/mPicmenu"
+                android:id="@+id/mPicmenuE"
                 android:layout_width="260dp"
                 android:layout_height="75dp"
                 android:layout_margin="5dp"
@@ -34,7 +34,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/mNamemenu"
+                    android:id="@+id/mNamemenuE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
@@ -45,7 +45,7 @@
                     android:textSize="17dp" />
 
                 <TextView
-                    android:id="@+id/mDescription"
+                    android:id="@+id/mDescriptionE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
@@ -55,7 +55,7 @@
                     android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/mPrice"
+                    android:id="@+id/mPriceE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
@@ -67,18 +67,11 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/Delbtmenu"
-                android:layout_width="40dp"
-                android:layout_height="25dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/ic_del" />
 
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/line"
+            android:id="@+id/lineE"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_weight="10"

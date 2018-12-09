@@ -226,7 +226,7 @@ ADDED from C:\Users\ADMIN\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\Users\ADMIN\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:33:19-42
 activity#com.kmutteats.srinuan.firebasekmutteat.Homemerchant
-ADDED from C:\Users\ADMIN\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:34:9-37:56
+ADDED from C:\Users\ADMIN\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:34:9-37:47
 	android:label
 		ADDED from C:\Users\ADMIN\AndroidStudioProjects\KMUTTEAT\app\src\main\AndroidManifest.xml:36:13-64
 	android:theme

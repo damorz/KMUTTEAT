@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -26,7 +27,8 @@ public class MyRecyclerviewAdapterMenu extends RecyclerView.Adapter<MyRecyclervi
     HomeMFragment recyclerview;
     ArrayList<Menu> userArrayList;
 
-    public MyRecyclerviewAdapterMenu(HomeMFragment recyclerview, ArrayList<Menu> userArrayList) {
+    public MyRecyclerviewAdapterMenu(HomeMFragment recyclerview, ArrayList<Menu> userArrayList)
+    {
         this.recyclerview = recyclerview;
         this.userArrayList = userArrayList;
         //this.URL = url;
@@ -76,6 +78,11 @@ public class MyRecyclerviewAdapterMenu extends RecyclerView.Adapter<MyRecyclervi
                 deleteSelectRow(position);
             }
         });
+
+        ///// Test Click
+
+
+
     }
 
     private void deleteSelectRow(int position)

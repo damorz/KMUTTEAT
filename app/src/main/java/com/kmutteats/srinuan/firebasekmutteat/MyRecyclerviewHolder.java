@@ -1,5 +1,6 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -8,13 +9,14 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyRecyclerviewHolder extends RecyclerView.ViewHolder
+public class MyRecyclerviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
+        View.OnTouchListener,View.OnLongClickListener
 {
     public TextView mUsername,mUserstatus,mLocation,mPhonenum,mUrl;
     public ImageView mPicres;
     public TextView mOnOff;
     public Button mDel;
-
+    private ItemClickRes itemclickres;
 
     public MyRecyclerviewHolder(View itemView)
     {
@@ -27,5 +29,29 @@ public class MyRecyclerviewHolder extends RecyclerView.ViewHolder
         //mUrl = itemView.findViewById(R.id.mUrl);
         mPicres = itemView.findViewById(R.id.mPicres);
         mDel = itemView.findViewById(R.id.Delbt);
+        itemView.setOnClickListener(this);
+        itemView.setOnLongClickListener(this);
+    }
+
+    public void setOnClickListener(ItemClickRes itemclickres) {
+        this.itemclickres = itemclickres;
+    }
+
+    @Override
+    public void onClick(View v) {
+        itemclickres.onClick(v, getAdapterPosition(), false, null);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        itemclickres.onClick(v, getAdapterPosition(), false, null);
+        return true;
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        itemclickres.onClick(v, getAdapterPosition(), true, null);
+        return true;
     }
 }
+

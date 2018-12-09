@@ -1,8 +1,13 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,6 +24,10 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHolder> {
@@ -26,6 +35,8 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
     private static final String TAG = "RecycleviewLOG";
     HomeCFragment recyclerview;
     ArrayList<User> userArrayList;
+    private Context context;
+
     //String URL;
     //ArrayList<Integer> iconadapter;
 
@@ -39,15 +50,18 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
 
     @NonNull
     @Override
-    public MyRecyclerviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyRecyclerviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
 
         LayoutInflater layoutInflater = LayoutInflater.from(recyclerview.getActivity().getApplicationContext());
+        //Context context = parent.getContext();
         View view =layoutInflater.inflate(R.layout.singlerow,parent,false );
         return new MyRecyclerviewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyRecyclerviewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyRecyclerviewHolder holder, final int position)
+    {
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.diskCacheStrategy(DiskCacheStrategy.RESOURCE);
@@ -83,6 +97,34 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
                 deleteSelectRow(position);
             }
         });
+
+        holder.setOnClickListener(new ItemClickRes() {
+            @Override
+            public void onClick(View view, int position, boolean isLongClick, MotionEvent event)
+            {
+
+                if(isLongClick)
+                {
+                    Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Now Long Click!", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                {
+                    Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Name Res : "+userArrayList.get(position).getUsername(), Toast.LENGTH_SHORT).show();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("nameresE",userArrayList.get(position).getUsername());
+                    ///// Test pass data
+                    MenuEachResFragment menuEachResFragment = new MenuEachResFragment();
+                    menuEachResFragment.setArguments(bundle);
+                    //// Test pass data
+                    FragmentTransaction ft = (recyclerview.getActivity()).getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.Flmain, menuEachResFragment);
+                    ft.commit();
+
+                }
+            }
+        });
+
     }
 
 
