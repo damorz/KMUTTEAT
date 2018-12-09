@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/mUpdatebtC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eb6b03"
+            android:text="@string/refresh"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerviewCart"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_margin="0dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:text="Total"
+                android:textColor="#eb6b03"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp">
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_above="@+id/buynow"
+                    android:ems="10"
+                    android:hint="add description"
+                    android:inputType="textPersonName" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/buynow"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="125dp"
+                android:background="#FF5733"
+                android:text="Buy Now"
+                android:textColor="#ffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

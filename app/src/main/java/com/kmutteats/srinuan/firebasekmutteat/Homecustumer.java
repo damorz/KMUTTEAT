@@ -44,6 +44,8 @@ public class Homecustumer extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -54,6 +56,11 @@ public class Homecustumer extends AppCompatActivity
 
         //Toast.makeText( this, "mail homecus : "+email, Toast.LENGTH_SHORT ).show();
         //deflat fragment for home
+
+        SharedPreferences prefs2 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor2 = prefs2.edit();
+        editor2.putString("Emailtest2", email); //InputString: from the EditText
+        editor2.commit();
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
@@ -100,10 +107,15 @@ public class Homecustumer extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_addcart) {
+            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.Flmain,new CartFragment());
+            ft.commit();
+            return true;
+        }
 
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected( item );
     }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
