@@ -1150,6 +1150,7 @@ drawable ic_addtocart
 drawable ic_audiotrack_dark
 drawable ic_audiotrack_light
 drawable ic_cart
+drawable ic_check
 drawable ic_coin
 drawable ic_coinbig
 drawable ic_del
@@ -1397,8 +1398,10 @@ drawable user
 drawable users
 id ALT
 id CTRL
+id Checked
 id Colum
 id Delbtmenu
+id EmailHisMer
 id FUNCTION
 id Flmain
 id Flmain2
@@ -1474,7 +1477,9 @@ id content
 id contentPanel
 id coordinator
 id cos
+id countOrder
 id countfood
+id countfoodHisMer
 id createacc
 id custom
 id customPanel
@@ -1567,6 +1572,7 @@ id mDescription
 id mDescriptionE
 id mLocation
 id mNamefoodHisCus
+id mNamefoodHisMer
 id mNamefoodOrder
 id mNamemenu
 id mNamemenuC
@@ -1580,15 +1586,18 @@ id mPicmenuC
 id mPicmenuE
 id mPicres
 id mPicresHisCus
+id mPicresHisMer
 id mPicresOrder
 id mPrice
 id mPriceC
 id mPriceE
 id mPriceHisCus
+id mPriceHisMer
 id mPriceOrder
 id mRecyclerview
 id mRecyclerviewCart
 id mRecyclerviewHisCus
+id mRecyclerviewHisMer
 id mRecyclerviewOrder
 id mRecyclerviewmenu
 id mRecyclerviewmenuE
@@ -1596,6 +1605,7 @@ id mStatus
 id mUpdatebt
 id mUpdatebtC
 id mUpdatebtHisCus
+id mUpdatebtHisMer
 id mUpdatebtOrder
 id mUpdatebtmenu
 id mUpdatebtmenuE
@@ -1943,6 +1953,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout single_row_cart
 layout single_row_history_customer
+layout single_row_history_merchant
 layout single_row_menu
 layout single_row_orderlist
 layout singlerow

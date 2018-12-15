@@ -77,10 +77,17 @@ public class Homemerchant extends AppCompatActivity
         editor3.putString("Emailtest4", email); //InputString: from the EditText
         editor3.commit();
 
+        SharedPreferences prefs6 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor6 = prefs6.edit();
+        editor6.putString("Nameres", nameres); //InputString: from the EditText
+        editor6.commit();
+
         SharedPreferences prefs4 = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor4 = prefs4.edit();
         editor4.putString("NameresToOrder", nameres); //InputString: from the EditText
         editor4.commit();
+
+
 
         db=FirebaseFirestore.getInstance();
         db.collection("account").document("MERCHANT").collection(email).document("data account")

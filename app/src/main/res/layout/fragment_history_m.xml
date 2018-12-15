@@ -3,12 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistoryMFragment">
-
+    tools:context=".HomeCFragment">
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="hisM" />
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/mUpdatebtHisMer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/refresh"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:background="#eb6b03" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerviewHisMer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp" />
+    </LinearLayout>
 
 </FrameLayout>

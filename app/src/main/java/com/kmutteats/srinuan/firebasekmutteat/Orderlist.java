@@ -6,15 +6,25 @@ public class Orderlist {
     String userId;
     String UrlOrder;
     String foodnameOrder;
+    String countfood;
 
-    public Orderlist(String userId,String foodnameOrder,String priceOrder,String emailOrder,String urlOrder)
+    public Orderlist(String userId,String foodnameOrder,String priceOrder,String emailOrder,String urlOrder,String countfood)
     {
         setUserId(userId);
         this.emailOrder =emailOrder;
         this.priceOrder = priceOrder;
         this.UrlOrder = urlOrder;
         this.foodnameOrder = foodnameOrder;
+        this.countfood =countfood;
 
+    }
+
+    public String getCountfood() {
+        return countfood;
+    }
+
+    public void setCountfood(String countfood) {
+        this.countfood = countfood;
     }
 
     public String getEmailOrder() {

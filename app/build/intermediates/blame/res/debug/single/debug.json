@@ -1512,6 +1512,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5a1600bcc33674645f642e9185fb33df\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_check.png.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_check.png"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_history.png.flat",
         "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_history.png"
     },
@@ -1676,6 +1680,10 @@
         "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\drawable\\signin.png"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_row_history_merchant.xml.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\src\\main\\res\\layout\\single_row_history_merchant.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_grey.png.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-xhdpi-v4\\ic_mr_button_grey.png"
     },
@@ -1798,6 +1806,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5a1600bcc33674645f642e9185fb33df\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_check.xml.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_check.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_search_black_24dp.png.flat",
@@ -2112,6 +2124,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_00_dark.png"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_check.png.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_check.png"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_plus.png.flat",
         "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_plus.png"
     },
@@ -2126,6 +2142,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connected_11_dark.png.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-xxhdpi-v4\\ic_mr_button_connected_11_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_check.png.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check.png"
     },
     {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_homecustumer.xml.flat",
@@ -3088,6 +3108,10 @@
         "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_minus.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_check.png.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_check.png"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_vol_type_tv_light.png.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-xhdpi-v4\\ic_vol_type_tv_light.png"
     },
@@ -3340,6 +3364,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-xhdpi-v4\\ic_media_pause_light.png"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_check.png.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_check.png"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_17_light.png.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_17_light.png"
     },
@@ -3406,6 +3434,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_vol_type_tv_light.png.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-1.0.0-alpha5.aar\\1a0220576dc6ac150dd18baf02824355\\res\\drawable-mdpi-v4\\ic_vol_type_tv_light.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_check.png.flat",
+        "source": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_check.png"
     },
     {
         "merged": "C:\\Users\\ADMIN\\AndroidStudioProjects\\KMUTTEAT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_21_dark.png.flat",
