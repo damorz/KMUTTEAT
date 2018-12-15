@@ -24,10 +24,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import static java.lang.Thread.sleep;
 
 public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclerviewHolderCart>{
     private static final String TAG = "RecycleviewLOG";
@@ -143,6 +147,7 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
                     infoc.put("Restaurant name", userArrayList.get(i[0]).getNameresmenu());
                     infoc.put("Price", userArrayList.get(i[0]).getPrice());
                     infoc.put("Food", userArrayList.get(i[0]).getNamemenu());
+                    infoc.put("URL",userArrayList.get(i[0]).getUrl());
                     db.collection("History").document("Customer").collection(email).document(userArrayList.get(i[0]).getNamemenu())
                             .set(infoc);
 
@@ -150,6 +155,7 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
                     infom.put("Restaurant name", email);
                     infom.put("Price", userArrayList.get(i[0]).getPrice());
                     infom.put("Food", userArrayList.get(i[0]).getNamemenu());
+                    infoc.put("URL",userArrayList.get(i[0]).getUrl());
                     infom.put("Count food", "" + countfoodInt[0]);
                     infom.put("Customer e-mail", email);
                     db.collection("Order list").document("Link").collection(userArrayList.get(i[0]).getNameresmenu()).document(userArrayList.get(i[0]).getNamemenu())
@@ -180,6 +186,19 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
                                         sentcoin.put("Coin", ""+coinInt);
                                         db.collection("account").document("CUSTOMER").collection(email).document("data account")
                                                 .set(sentcoin,SetOptions.merge());
+                                        for(i[0] =0; i[0] <getItemCount(); i[0]++)
+                                        {
+
+                                                deleteSelectRow(i[0]);
+                                            try {
+                                                sleep(1000);
+                                            } catch (InterruptedException e) {
+                                                e.printStackTrace();
+                                            }
+
+
+                                        }
+
                                         FragmentTransaction ft = (recyclerview.getActivity()).getSupportFragmentManager().beginTransaction();
                                         ft.replace(R.id.Flmain, new HomeCFragment());
                                         ft.commit();
@@ -215,7 +234,7 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(recyclerview.getActivity().getApplicationContext(),"Delete Successfully",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(recyclerview.getActivity().getApplicationContext(),"Delete Successfully",Toast.LENGTH_SHORT).show();
                         recyclerview.loadDataFromFirebase();
 
                     }

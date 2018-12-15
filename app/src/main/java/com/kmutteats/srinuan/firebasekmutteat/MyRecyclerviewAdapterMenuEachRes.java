@@ -68,7 +68,7 @@ public class MyRecyclerviewAdapterMenuEachRes extends RecyclerView.Adapter<MyRec
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(recyclerview.getActivity().getApplicationContext());
                 String email = prefs.getString("Emailtest", "no id");
 
-                //Toast.makeText( recyclerview.getActivity().getApplicationContext(),"mail adapter : " +email,Toast.LENGTH_SHORT ).show();
+                Toast.makeText( recyclerview.getActivity().getApplicationContext(),"Added "+userArrayList.get(position).getNamemenu()+" to cart!",Toast.LENGTH_SHORT ).show();
 
                 Map<String, Object> info = new HashMap<>();
                 info.put( "Food name",userArrayList.get( position ).getNamemenu());
