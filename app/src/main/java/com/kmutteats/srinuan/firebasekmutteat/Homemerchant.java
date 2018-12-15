@@ -1,6 +1,7 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -8,6 +9,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 
@@ -32,6 +34,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Adapter;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -45,6 +48,7 @@ public class Homemerchant extends AppCompatActivity
     private static final String TAG = "LOGHomeMerchant";
     FirebaseFirestore db;
     FirebaseAuth mAuth;
+    TextView emailTopM,usernameTopM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +72,26 @@ public class Homemerchant extends AppCompatActivity
         final String nameres = _recievenameres.getStringExtra("nr");
         Intent _recievestatus = getIntent();
         final String statuscheck = _recievestatus.getStringExtra("statuscheck");
+        SharedPreferences prefs3 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor3 = prefs3.edit();
+        editor3.putString("Emailtest4", email); //InputString: from the EditText
+        editor3.commit();
 
+        db=FirebaseFirestore.getInstance();
+        db.collection("account").document("MERCHANT").collection(email).document("data account")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            final String usernamepull = documentSnapshot.getString("Username");
+                            usernameTopM = (TextView) findViewById(R.id.usernameTopM);
+                            emailTopM = (TextView) findViewById(R.id.emailTopM);
+                            usernameTopM.setText(usernamepull);
+                            emailTopM.setText(email);
+                        }
+                    }
+                });
 
 
 

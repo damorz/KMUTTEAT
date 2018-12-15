@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/mPicres"
+                android:id="@+id/mPicresHisCus"
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -34,55 +34,37 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/mUsername"
+                    android:id="@+id/mNamefoodHisCus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
                     android:layout_marginTop="15dp"
-                    android:text="Name"
+                    android:text="FoodName"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textColor="#EB6B03"
                     android:textSize="17dp" />
 
-                <TextView
-                    android:id="@+id/mOnOff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="23dp"
-                    android:text="Closed"
-                    android:textColor="#708090"
-                    android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/mStatus"
+                    android:id="@+id/mNameresHisCus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
                     android:layout_marginTop="0dp"
-                    android:text="Description"
+                    android:text="Restaurant"
                     android:textColor="#708090"
                     android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/mPhonenum"
+                    android:id="@+id/mPriceHisCus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="23dp"
                     android:layout_marginTop="0dp"
-                    android:text="Phone number"
+                    android:drawableLeft="@drawable/ic_price"
+                    android:text="Price"
                     android:textColor="#708090"
                     android:textSize="12dp" />
-
-                <TextView
-                    android:id="@+id/mLocation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="0dp"
-                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
-                    android:text="Location"
-                    android:textColor="#EB6B03"
-                    android:textSize="13dp" />
 
             </LinearLayout>
 

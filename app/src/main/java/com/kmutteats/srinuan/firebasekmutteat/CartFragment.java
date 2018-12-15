@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import static androidx.constraintlayout.motion.widget.MotionScene.TAG;
 
@@ -41,7 +44,8 @@ public class CartFragment extends Fragment {
     ArrayList<Cart> userArrayList;
     MyRecyclerviewAdapterCart adapter;
     MyRecyclerviewHolderCart holder;
-    Button updatabtn;
+    Button updatabtn,buynow;
+    TextView total;
 
     public CartFragment() {
         // Required empty public constructor
@@ -52,10 +56,11 @@ public class CartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        ((Homecustumer)getActivity()).setActionBarTitle("Cart");
         View view = inflater.inflate( R.layout.fragment_cart, container, false );
 
         SharedPreferences prefs2 = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
-        String email = prefs2.getString("Emailtest2", "no id");
+        final String email = prefs2.getString("Emailtest2", "no id");
         //Toast.makeText(getActivity().getApplicationContext(), "cart ! mail !: " + email, Toast.LENGTH_SHORT).show();
 
         userArrayList = new ArrayList<>();
@@ -68,6 +73,8 @@ public class CartFragment extends Fragment {
         loadDataFromFirebase();
 
         //setupUpdateButton();
+        total = view.findViewById(R.id.total);
+        buynow = view.findViewById(R.id.buynow);
         updatabtn = view.findViewById(R.id.mUpdatebtC);
         updatabtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +98,7 @@ public class CartFragment extends Fragment {
         Toast.makeText(getActivity().getApplicationContext(), "cart ! mail !: " + email, Toast.LENGTH_SHORT).show();
 
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setTitle("Loading Restaurant");
+        progressDialog.setTitle("Loading Cart");
         progressDialog.setMessage("Loading . . .");
         progressDialog.show();
         db.collection("Cart").document("link").collection(email)

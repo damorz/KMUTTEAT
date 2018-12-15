@@ -86,14 +86,6 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
         //Picasso.get().load(userArrayList.get(position).getUrl()).resize(250,250).centerCrop().into(holder.mPicres);
         Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrl()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicres);
 
-        holder.mDel.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                deleteSelectRow(position);
-            }
-        });
 
         holder.setOnClickListener(new ItemClickRes() {
             @Override
@@ -115,6 +107,7 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
                     MenuEachResFragment menuEachResFragment = new MenuEachResFragment();
                     menuEachResFragment.setArguments(bundle);
                     //// Test pass data
+
                     FragmentTransaction ft = (recyclerview.getActivity()).getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.Flmain, menuEachResFragment);
                     ft.commit();

@@ -46,7 +46,6 @@ public class HomeCFragment extends Fragment {
     RecyclerView mRecyclerView;
     ArrayList<User> userArrayList;
     MyRecyclerviewAdapter adapter;
-    MyRecyclerviewHolder holder;
     Button updatabtn;
 
     public HomeCFragment() {
@@ -61,10 +60,6 @@ public class HomeCFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home_c, container, false);
         // Inflate the layout for this fragment
 
-        Bundle bundle = getArguments();
-        String email = bundle.getString("email");
-
-        Toast.makeText(getActivity().getApplicationContext(), "mail is  : " +email , Toast.LENGTH_SHORT).show();
 
 
 
@@ -99,20 +94,6 @@ public class HomeCFragment extends Fragment {
 
         return view;
     }
-
-
-    /*private void setupUpdateButton() {
-
-        updatabtn = findViewById(R.id.mUpdatebt);
-        updatabtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                loadDataFromFirebase();
-
-            }
-        });
-    }*/
 
     public void loadDataFromFirebase() {
 
@@ -157,34 +138,4 @@ public class HomeCFragment extends Fragment {
                 });
 
     }
-
-    /*private void addDataToFirebase() {
-
-        Random random = new Random();
-        for(int i = 0 ;i<2;i++) {
-            Map<String, String> dataMap = new HashMap<>();
-            dataMap.put("Name", "try name" + random.nextInt(50));
-            dataMap.put("Status", "try status" + random.nextInt(50));
-            db.collection("TEST")
-                    .add(dataMap)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Toast.makeText(Recyclerview.this, "Added Data!", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        }
-    }
-
-    private void setUpFirebase() {
-        db = FirebaseFirestore.getInstance();
-    }
-
-    private void setUpRecycleView() {
-        mRecyclerView = findViewById(R.id.mRecyclerview) ;
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }*/
-
-
 }

@@ -45,6 +45,7 @@ public class register extends AppCompatActivity
     public static final String USERNAME_KEY = "Username";
     public static final String PHONE_KEY = "Phone";
     public static final String EMAIL_KEY = "E-mail";
+
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
@@ -124,6 +125,7 @@ public class register extends AppCompatActivity
                     user.put(USERNAME_KEY, username);
                     user.put(PHONE_KEY,phonenum);
                     user.put(EMAIL_KEY,email);
+                    user.put("Coin","0");
                     db.collection("account").document("MERCHANT").collection(email).document("data account")
                     .set(user)
                     .addOnSuccessListener(new OnSuccessListener<Void>()
@@ -150,6 +152,7 @@ public class register extends AppCompatActivity
                     user.put(USERNAME_KEY, username);
                     user.put(PHONE_KEY,phonenum);
                     user.put(EMAIL_KEY,email);
+                    user.put("Coin","500");
                     db.collection("account").document("CUSTOMER").collection(email).document("data account")
                     .set(user)
                     .addOnSuccessListener(new OnSuccessListener<Void>()

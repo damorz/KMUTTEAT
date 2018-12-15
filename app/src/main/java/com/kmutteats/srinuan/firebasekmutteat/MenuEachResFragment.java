@@ -52,13 +52,14 @@ public class MenuEachResFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
+
         View view  = inflater.inflate(R.layout.fragment_menu_each_res, container, false);
         // Inflate the layout for this fragment
 
         //////// Test revieve data
         Bundle bundle = getArguments();
         String nameresE = bundle.getString("nameresE");
-
+        ((Homecustumer)getActivity()).setActionBarTitle(nameresE);
 
 
         //Toast.makeText(getActivity().getApplicationContext(), "menuEach mail is  : " + email, Toast.LENGTH_SHORT).show();

@@ -15,7 +15,6 @@ public class MyRecyclerviewHolder extends RecyclerView.ViewHolder implements Vie
     public TextView mUsername,mUserstatus,mLocation,mPhonenum,mUrl;
     public ImageView mPicres;
     public TextView mOnOff;
-    public Button mDel;
     private ItemClickRes itemclickres;
 
     public MyRecyclerviewHolder(View itemView)
@@ -28,7 +27,6 @@ public class MyRecyclerviewHolder extends RecyclerView.ViewHolder implements Vie
         mOnOff = itemView.findViewById(R.id.mOnOff);
         //mUrl = itemView.findViewById(R.id.mUrl);
         mPicres = itemView.findViewById(R.id.mPicres);
-        mDel = itemView.findViewById(R.id.Delbt);
         itemView.setOnClickListener(this);
         itemView.setOnLongClickListener(this);
     }

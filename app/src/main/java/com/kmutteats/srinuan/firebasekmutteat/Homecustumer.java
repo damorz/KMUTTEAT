@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -12,8 +15,11 @@ import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,20 +29,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Homecustumer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     FirebaseAuth mAuth;
+    FirebaseFirestore db;
+    TextView usernameTop,emailTop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homecustumer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,6 +61,23 @@ public class Homecustumer extends AppCompatActivity
         Intent _recievestatus = getIntent();
         final String statuscheck = _recievestatus.getStringExtra("statuscheck");
 
+        db=FirebaseFirestore.getInstance();
+        db.collection("account").document("CUSTOMER").collection(email).document("data account")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                          @Override
+                                          public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                              if (documentSnapshot.exists()) {
+                                                  final String usernamepull = documentSnapshot.getString("Username");
+                                                  usernameTop = (TextView) findViewById(R.id.usernameTop);
+                                                  emailTop = (TextView) findViewById(R.id.emailTop);
+                                                  usernameTop.setText(usernamepull);
+                                                  emailTop.setText(email);
+                                              }
+                                          }
+                                      });
+
+
         //Toast.makeText( this, "mail homecus : "+email, Toast.LENGTH_SHORT ).show();
         //deflat fragment for home
 
@@ -66,6 +90,11 @@ public class Homecustumer extends AppCompatActivity
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("Emailtest", email); //InputString: from the EditText
         editor.commit();
+
+        SharedPreferences prefs3 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor3 = prefs3.edit();
+        editor3.putString("Emailtest3", email); //InputString: from the EditText
+        editor3.commit();
 
         Bundle bundle = new Bundle();
         bundle.putString("email", email);
@@ -125,7 +154,7 @@ public class Homecustumer extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.Flmain,new HomeCFragment());
             ft.commit();
         }
