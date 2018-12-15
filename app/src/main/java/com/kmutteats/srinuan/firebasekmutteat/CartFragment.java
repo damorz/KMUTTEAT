@@ -83,7 +83,6 @@ public class CartFragment extends Fragment {
 
     public void loadDataFromFirebase() {
 
-
         if(userArrayList.size()>0)
             userArrayList.clear();
 
@@ -106,10 +105,10 @@ public class CartFragment extends Fragment {
                                     querySnapshot.getString("Food name"),
                                     querySnapshot.getString("Price"),
                                     querySnapshot.getString("URL"),
-                                    querySnapshot.getString("Restaurant name")); //status test
+                                    querySnapshot.getString("Restaurant name"),
+                                    querySnapshot.getString("Count food")); //count test
                             userArrayList.add(cart);
                         }
-
                         adapter = new MyRecyclerviewAdapterCart(CartFragment.this, userArrayList);
                         mRecyclerView.setAdapter(adapter);
                         progressDialog.dismiss();

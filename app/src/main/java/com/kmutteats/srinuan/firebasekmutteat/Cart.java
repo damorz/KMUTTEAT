@@ -10,17 +10,26 @@ public class Cart
     String userId;
     String Url;
     String nameresmenu;
+    String countfood;
     ImageView picmenu;
 
-    public Cart(String userId,String namemenu, String price,String url,String nameresmenu)
+    public Cart(String userId,String namemenu, String price,String url,String nameresmenu,String countfood)
     {
         setUserId(userId);
         this.namemenu = namemenu;
         this.price = price;
         this.Url = url;
         this.nameresmenu = nameresmenu;
+        this.countfood = countfood;
     }
 
+    public String getCountfood() {
+        return countfood;
+    }
+
+    public void setCountfood(String countfood) {
+        this.countfood = countfood;
+    }
 
     public String getNamemenu() {
         return namemenu;

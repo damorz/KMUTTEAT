@@ -1,5 +1,7 @@
 package com.kmutteats.srinuan.firebasekmutteat;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,13 +44,14 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyRecyclerviewHolderCart holder, final int position) {
-
+    public void onBindViewHolder(@NonNull final MyRecyclerviewHolderCart holder, final int position)
+    {
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.diskCacheStrategy(DiskCacheStrategy.RESOURCE);
         holder.mNamemenuC.setText(userArrayList.get(position).getNamemenu());
         holder.mNameresC.setText(userArrayList.get(position).getNameresmenu());
         holder.mPriceC.setText(userArrayList.get(position).getPrice());
+        Toast.makeText( recyclerview.getActivity().getApplicationContext(), "add : " +userArrayList.get(position).getCountfood() , Toast.LENGTH_SHORT ).show();
 
 
         /*String close = "closed";
@@ -68,14 +72,18 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
         Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrl()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicMenuC);
 
 
+        final int[] countfoodInt = {Integer.valueOf(userArrayList.get(position).getCountfood())};
+        holder.countfood.setText(""+ countfoodInt[0]);
+
         holder.increase.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
+                countfoodInt[0] = countfoodInt[0] + 1;
+                holder.countfood.setText(""+ countfoodInt[0]);
 
-                holder.countfood.setText( "1" );
-                Toast.makeText( recyclerview.getActivity().getApplicationContext(), "add : ", Toast.LENGTH_SHORT ).show();
+                //Toast.makeText( recyclerview.getActivity().getApplicationContext(), "add : "  , Toast.LENGTH_SHORT ).show();
             }
         });
         holder.decrease.setOnClickListener(new View.OnClickListener()
@@ -83,9 +91,17 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
             @Override
             public void onClick(View view)
             {
-                    //deleteSelectRow(position);
-                holder.countfood.setText( "1000" );
-                Toast.makeText( recyclerview.getActivity().getApplicationContext(), "Minus : ", Toast.LENGTH_SHORT ).show();
+                if (countfoodInt[0]==1)
+                {
+                    deleteSelectRow(position);
+                }
+                else
+                {
+                    countfoodInt[0] = countfoodInt[0] - 1;
+                    holder.countfood.setText(""+ countfoodInt[0]);
+                }
+
+                //Toast.makeText( recyclerview.getActivity().getApplicationContext(), "Minus : "  , Toast.LENGTH_SHORT ).show();
 
             }
         });
@@ -97,8 +113,12 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
     }
 
     private void deleteSelectRow(int position) {
+        SharedPreferences prefs2 = PreferenceManager.getDefaultSharedPreferences(recyclerview.getActivity().getApplicationContext());
+        String email = prefs2.getString("Emailtest2", "no id");
         recyclerview.db.collection("Cart")
-                .document(userArrayList.get(position).getNamemenu())
+                .document("link")
+                .collection(email)
+                .document(userArrayList.get(position).getUserId())
                 .delete()
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

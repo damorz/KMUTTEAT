@@ -69,12 +69,14 @@ public class MyRecyclerviewAdapterMenuEachRes extends RecyclerView.Adapter<MyRec
                 String email = prefs.getString("Emailtest", "no id");
 
                 //Toast.makeText( recyclerview.getActivity().getApplicationContext(),"mail adapter : " +email,Toast.LENGTH_SHORT ).show();
+
                 Map<String, Object> info = new HashMap<>();
-                info.put( "Food name",userArrayList.get( position ).getNamemenu() );
-                info.put( "Price",userArrayList.get( position ).getPrice() );
-                info.put( "Description",userArrayList.get( position ).getDescrip() );
-                info.put( "Restaurant name",userArrayList.get( position ).getNameresmenu() );
-                info.put( "URL",userArrayList.get( position ).getUrl() );
+                info.put( "Food name",userArrayList.get( position ).getNamemenu());
+                info.put( "Price",userArrayList.get( position ).getPrice());
+                info.put( "Description",userArrayList.get( position ).getDescrip());
+                info.put( "Restaurant name",userArrayList.get( position ).getNameresmenu());
+                info.put( "URL",userArrayList.get( position ).getUrl());
+                info.put("Count food","1");
                 db.collection( "Cart" ).document("link").collection( email ).document(userArrayList.get( position ).getNamemenu())
                         .set(info);
             }
