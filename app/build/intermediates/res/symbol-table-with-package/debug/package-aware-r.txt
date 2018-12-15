@@ -1506,6 +1506,7 @@ id editText2
 id editText3
 id edit_query
 id email
+id emailOrder
 id emailTop
 id emailTopM
 id end
@@ -1566,6 +1567,7 @@ id mDescription
 id mDescriptionE
 id mLocation
 id mNamefoodHisCus
+id mNamefoodOrder
 id mNamemenu
 id mNamemenuC
 id mNamemenuE
@@ -1578,19 +1580,23 @@ id mPicmenuC
 id mPicmenuE
 id mPicres
 id mPicresHisCus
+id mPicresOrder
 id mPrice
 id mPriceC
 id mPriceE
 id mPriceHisCus
+id mPriceOrder
 id mRecyclerview
 id mRecyclerviewCart
 id mRecyclerviewHisCus
+id mRecyclerviewOrder
 id mRecyclerviewmenu
 id mRecyclerviewmenuE
 id mStatus
 id mUpdatebt
 id mUpdatebtC
 id mUpdatebtHisCus
+id mUpdatebtOrder
 id mUpdatebtmenu
 id mUpdatebtmenuE
 id mUsername
@@ -1938,6 +1944,7 @@ layout select_dialog_singlechoice_material
 layout single_row_cart
 layout single_row_history_customer
 layout single_row_menu
+layout single_row_orderlist
 layout singlerow
 layout singlerow_each_res
 layout support_simple_spinner_dropdown_item
