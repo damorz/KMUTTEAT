@@ -52,7 +52,7 @@
                 android:layout_marginTop="45dp">
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/descriCart"
                     android:layout_width="match_parent"
                     android:layout_height="61dp"
                     android:layout_above="@+id/buynow"

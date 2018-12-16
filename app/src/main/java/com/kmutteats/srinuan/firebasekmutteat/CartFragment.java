@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,7 @@ public class CartFragment extends Fragment {
     MyRecyclerviewHolderCart holder;
     Button updatabtn,buynow;
     TextView total;
+    EditText descriCart;
 
     public CartFragment() {
         // Required empty public constructor
@@ -73,6 +75,7 @@ public class CartFragment extends Fragment {
         loadDataFromFirebase();
 
         //setupUpdateButton();
+        descriCart = view.findViewById(R.id.descriCart);
         total = view.findViewById(R.id.total);
         buynow = view.findViewById(R.id.buynow);
         updatabtn = view.findViewById(R.id.mUpdatebtC);

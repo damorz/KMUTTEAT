@@ -158,6 +158,7 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
                     infoc.put("URL",userArrayList.get(i[0]).getUrl());
                     infom.put("Count food", "" + countfoodInt[0]);
                     infom.put("Customer e-mail", email);
+                    infom.put("Description",recyclerview.descriCart.getText().toString());
                     db.collection("Order list").document("Link").collection(userArrayList.get(i[0]).getNameresmenu()).document(userArrayList.get(i[0]).getNamemenu())
                             .set(infom);
                 }

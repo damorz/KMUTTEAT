@@ -1401,6 +1401,7 @@ id CTRL
 id Checked
 id Colum
 id Delbtmenu
+id DescripOrder
 id EmailHisMer
 id FUNCTION
 id Flmain
@@ -1489,6 +1490,7 @@ id decelerate
 id decor_content_parent
 id default_activity_button
 id deltaRelative
+id descriCart
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub

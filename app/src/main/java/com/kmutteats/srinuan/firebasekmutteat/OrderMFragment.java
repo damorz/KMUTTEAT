@@ -106,7 +106,8 @@ public class OrderMFragment extends Fragment
                                     querySnapshot.getString("Price"),
                                     querySnapshot.getString("Customer e-mail"),
                                     querySnapshot.getString("URL"),
-                                    querySnapshot.getString("Count food")); //status test
+                                    querySnapshot.getString("Count food"),
+                                    querySnapshot.getString("Description")); //status test
                             userArrayList.add(orderlist);
                         }
 

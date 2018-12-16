@@ -127,33 +127,6 @@ public class Homemerchant extends AppCompatActivity
 
         statusOF();
 
-        /*db.collection("account").document("MERCHANT").collection(email).document("data account")
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>()
-                {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot)
-                    {
-                        if(documentSnapshot.exists())
-                        {
-                            final String _nameres = documentSnapshot.getString("Restaurant name");*/
-
-
-
-
-                        /*}
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG,"Document fail to loaded");
-                    }
-                });*/
-//        HomeMFragment m = new HomeMFragment();
-//        m.setname("Test");
-
-
     }
     public void setActionBarTitle(String title) { getSupportActionBar().setTitle(title);}
 

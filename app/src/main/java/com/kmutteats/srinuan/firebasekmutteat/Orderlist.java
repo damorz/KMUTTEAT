@@ -7,8 +7,9 @@ public class Orderlist {
     String UrlOrder;
     String foodnameOrder;
     String countfood;
+    String Descrip;
 
-    public Orderlist(String userId,String foodnameOrder,String priceOrder,String emailOrder,String urlOrder,String countfood)
+    public Orderlist(String userId,String foodnameOrder,String priceOrder,String emailOrder,String urlOrder,String countfood,String descrip)
     {
         setUserId(userId);
         this.emailOrder =emailOrder;
@@ -16,7 +17,16 @@ public class Orderlist {
         this.UrlOrder = urlOrder;
         this.foodnameOrder = foodnameOrder;
         this.countfood =countfood;
+        this.Descrip = descrip;
 
+    }
+
+    public String getDescrip() {
+        return Descrip;
+    }
+
+    public void setDescrip(String descrip) {
+        Descrip = descrip;
     }
 
     public String getCountfood() {

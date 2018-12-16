@@ -53,12 +53,14 @@ public class MyRecyclerviewAdapterOrder extends RecyclerView.Adapter<MyRecyclerv
         holder.EmailOrder.setText(userArrayList.get(position).getEmailOrder());
         holder.PriceOrder.setText(userArrayList.get(position).getPriceOrder());
         holder.CountOrder.setText(userArrayList.get(position).getCountfood());
+        holder.DescriptionOrder.setText(userArrayList.get(position).getDescrip());
         Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrlOrder()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicMenuOrder);
         holder.mcheck.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
+                Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Finishing " + userArrayList.get(position).getFoodnameOrder()+". . .", Toast.LENGTH_SHORT).show();
                 SharedPreferences prefs6 = PreferenceManager.getDefaultSharedPreferences(recyclerview.getActivity().getApplicationContext());
                 String nameres = prefs6.getString("Nameres", "no id");
                 db = FirebaseFirestore.getInstance();

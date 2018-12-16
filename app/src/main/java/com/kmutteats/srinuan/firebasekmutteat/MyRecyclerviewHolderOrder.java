@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyRecyclerviewHolderOrder extends RecyclerView.ViewHolder
 {
-    public TextView FoodNameOrder,PriceOrder,EmailOrder,CountOrder;
+    public TextView FoodNameOrder,PriceOrder,EmailOrder,CountOrder,DescriptionOrder;
     public ImageView mPicMenuOrder;
     public Button mcheck;
     public MyRecyclerviewHolderOrder(@NonNull View itemView) {
@@ -22,6 +22,7 @@ public class MyRecyclerviewHolderOrder extends RecyclerView.ViewHolder
         mPicMenuOrder = itemView.findViewById(R.id.mPicresOrder);
         mcheck = itemView.findViewById(R.id.Checked);
         CountOrder = itemView.findViewById(R.id.countOrder);
+        DescriptionOrder = itemView.findViewById(R.id.DescripOrder);
 
     }
 }
