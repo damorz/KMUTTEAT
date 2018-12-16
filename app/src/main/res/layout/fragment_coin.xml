@@ -41,7 +41,7 @@
             android:src="@drawable/ic_coinbig" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/signin1"
+            android:id="@+id/maddCoin"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_alignParentBottom="true"

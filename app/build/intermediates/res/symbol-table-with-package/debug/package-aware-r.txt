@@ -1612,6 +1612,7 @@ id mUpdatebtOrder
 id mUpdatebtmenu
 id mUpdatebtmenuE
 id mUsername
+id maddCoin
 id mailregis
 id masked
 id media_actions
