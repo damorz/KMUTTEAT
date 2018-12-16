@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -269,6 +270,12 @@ public class MainActivity extends AppCompatActivity
                                 }
                                 else if (statuscheck.equals("Merchant"))
                                 {
+                                    //////////////
+                                    Map<String , Object> info = new HashMap<>();
+                                    info.put("Status RES","closed");
+                                    db.collection("Restaurant").document(nameres)
+                                        .set(info,SetOptions.merge());
+                                    //////////////
                                     Intent k = new Intent(MainActivity.this,Homemerchant.class); ////////////////////////////////////!!!!!! อันนี้ถ้าเป็นคนที่มีร้านแล้วจะเด้งไปหน้าหลักของแม่ค้า
                                     k.putExtra("mail",email);
                                     k.putExtra("nr",nameres);

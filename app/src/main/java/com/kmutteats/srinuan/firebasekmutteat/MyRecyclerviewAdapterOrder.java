@@ -60,7 +60,7 @@ public class MyRecyclerviewAdapterOrder extends RecyclerView.Adapter<MyRecyclerv
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Finishing " + userArrayList.get(position).getFoodnameOrder()+". . .", Toast.LENGTH_SHORT).show();
+                Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Please wait . . .", Toast.LENGTH_SHORT).show();
                 SharedPreferences prefs6 = PreferenceManager.getDefaultSharedPreferences(recyclerview.getActivity().getApplicationContext());
                 String nameres = prefs6.getString("Nameres", "no id");
                 db = FirebaseFirestore.getInstance();

@@ -198,6 +198,12 @@ public class Homemerchant extends AppCompatActivity
             ft.commit();
         }
         else if (id == R.id.nav_logout2) {
+            /////////////////
+            Map<String , Object> info = new HashMap<>();
+            info.put("Status RES","closed");
+            db.collection("Restaurant").document(nameres)
+                    .set(info,SetOptions.merge());
+            /////////////////
             mAuth.signOut();
             finish();
         }

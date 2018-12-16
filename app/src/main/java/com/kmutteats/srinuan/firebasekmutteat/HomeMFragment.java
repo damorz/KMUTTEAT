@@ -60,6 +60,7 @@ public class HomeMFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        ((Homemerchant)getActivity()).setActionBarTitle("My Restaurant");
         View view = inflater.inflate(R.layout.fragment_home_m, container, false);
         BT = (FloatingActionButton)view.findViewById(R.id.addmenuFG) ;
         Bundle bundle = getArguments();
