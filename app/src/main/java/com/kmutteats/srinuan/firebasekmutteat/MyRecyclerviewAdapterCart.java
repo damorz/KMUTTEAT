@@ -155,7 +155,8 @@ public class MyRecyclerviewAdapterCart extends RecyclerView.Adapter<MyRecyclervi
                     infom.put("Restaurant name", email);
                     infom.put("Price", userArrayList.get(i[0]).getPrice());
                     infom.put("Food", userArrayList.get(i[0]).getNamemenu());
-                    infoc.put("URL",userArrayList.get(i[0]).getUrl());
+                    infom.put("URL",userArrayList.get(i[0]).getUrl());
+                    //Toast.makeText(recyclerview.getActivity().getApplicationContext(), "เย้" + userArrayList.get(i[0]).getUrl(), Toast.LENGTH_SHORT).show();
                     infom.put("Count food", "" + countfoodInt[0]);
                     infom.put("Customer e-mail", email);
                     infom.put("Description",recyclerview.descriCart.getText().toString());

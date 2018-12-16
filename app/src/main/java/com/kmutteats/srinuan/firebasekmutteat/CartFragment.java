@@ -98,7 +98,7 @@ public class CartFragment extends Fragment {
 
         SharedPreferences prefs2 = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
         String email = prefs2.getString("Emailtest2", "no id");
-        Toast.makeText(getActivity().getApplicationContext(), "cart ! mail !: " + email, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity().getApplicationContext(), "cart ! mail !: " + email, Toast.LENGTH_SHORT).show();
 
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setTitle("Loading Cart");

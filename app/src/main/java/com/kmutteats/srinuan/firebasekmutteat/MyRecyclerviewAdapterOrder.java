@@ -69,6 +69,7 @@ public class MyRecyclerviewAdapterOrder extends RecyclerView.Adapter<MyRecyclerv
                 info.put("Food name",userArrayList.get(position).getFoodnameOrder());
                 info.put("Price",userArrayList.get(position).getPriceOrder());
                 info.put("Count food",userArrayList.get(position).getCountfood());
+                info.put("URL",userArrayList.get(position).getUrlOrder());
                 db.collection("History").document("Merchant").collection(nameres).document(userArrayList.get(position).getFoodnameOrder())
                 .set(info);
                 deleteSelectRow(position);
