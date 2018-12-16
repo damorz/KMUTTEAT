@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">159064997556-9nc879jalfjdoakjqllhclspb5sfqll1.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://fir-kmutteat.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">159064997556</string>
-    <string name="google_api_key" translatable="false">AIzaSyAfqO2DqrrZyHVb1lZlx_HJy-3fsE7TWSw</string>
-    <string name="google_app_id" translatable="false">1:159064997556:android:10660f4ec5dcfeec</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAfqO2DqrrZyHVb1lZlx_HJy-3fsE7TWSw</string>
-    <string name="google_storage_bucket" translatable="false">fir-kmutteat.appspot.com</string>
-    <string name="project_id" translatable="false">fir-kmutteat</string>
+    <string name="default_web_client_id" translatable="false">192349141391-mpiejogcdtrabiiqg4rrj9e1ulh73fot.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://nearbydormitory.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">192349141391</string>
+    <string name="google_api_key" translatable="false">AIzaSyDFgMMoaSuhJo1KZtHS8P6v-pkX-MIj8kc</string>
+    <string name="google_app_id" translatable="false">1:192349141391:android:10660f4ec5dcfeec</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDFgMMoaSuhJo1KZtHS8P6v-pkX-MIj8kc</string>
+    <string name="google_storage_bucket" translatable="false">nearbydormitory.appspot.com</string>
+    <string name="project_id" translatable="false">nearbydormitory</string>
 </resources>
