@@ -80,7 +80,7 @@ public class CoinFragment extends Fragment {
                                 coinCusreturn.put("Coin",""+coinCusInt);
                                 final double finalCoinCusInt = coinCusInt;
                                 db.collection("account").document("CUSTOMER").collection(email).document("data account")
-                                        .set(coinCusreturn)
+                                        .set(coinCusreturn,SetOptions.merge())
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
