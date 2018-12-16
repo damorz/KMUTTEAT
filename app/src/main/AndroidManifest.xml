@@ -3,6 +3,7 @@
     package="com.kmutteats.srinuan.firebasekmutteat">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"

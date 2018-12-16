@@ -69,8 +69,8 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
         holder.mOnOff.setTextColor(Color.parseColor("#eb6b03"));
         holder.mOnOff.setText(userArrayList.get(position).getOnOff());
 
-        /*String close = "closed";
-        if(userArrayList.get(position).getOnOff()==close)
+
+        if(userArrayList.get(position).getOnOff().equals("closed"))
         {
             holder.mOnOff.setTextColor(Color.parseColor("#f5220d"));
             holder.mOnOff.setText(userArrayList.get(position).getOnOff());
@@ -80,7 +80,7 @@ public class MyRecyclerviewAdapter extends RecyclerView.Adapter<MyRecyclerviewHo
         {
             holder.mOnOff.setTextColor(Color.parseColor("#4baf11"));
             holder.mOnOff.setText(userArrayList.get(position).getOnOff());
-        }*/
+        }
 
         //holder.mUrl.setText(userArrayList.get(position).getUrl());
         //Picasso.get().load(userArrayList.get(position).getUrl()).resize(250,250).centerCrop().into(holder.mPicres);
