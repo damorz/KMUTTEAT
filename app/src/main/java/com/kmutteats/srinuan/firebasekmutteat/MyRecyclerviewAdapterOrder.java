@@ -13,7 +13,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,6 +57,8 @@ public class MyRecyclerviewAdapterOrder extends RecyclerView.Adapter<MyRecyclerv
         holder.CountOrder.setText(userArrayList.get(position).getCountfood());
         holder.DescriptionOrder.setText(userArrayList.get(position).getDescrip());
         Glide.with(recyclerview.getActivity().getApplicationContext()).load(userArrayList.get(position).getUrlOrder()).apply(requestOptions.centerCrop().override(200,200)).into(holder.mPicMenuOrder);
+
+
         holder.mcheck.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -63,6 +67,38 @@ public class MyRecyclerviewAdapterOrder extends RecyclerView.Adapter<MyRecyclerv
                 Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Please wait . . .", Toast.LENGTH_SHORT).show();
                 SharedPreferences prefs6 = PreferenceManager.getDefaultSharedPreferences(recyclerview.getActivity().getApplicationContext());
                 String nameres = prefs6.getString("Nameres", "no id");
+
+                SharedPreferences prefs3 = PreferenceManager.getDefaultSharedPreferences(recyclerview.getActivity().getApplicationContext());
+                final String email = prefs3.getString("Emailtest4", "no id");
+
+                //Toast.makeText(recyclerview.getActivity().getApplicationContext(), "mail merchant : " + email, Toast.LENGTH_SHORT).show();
+                db = FirebaseFirestore.getInstance();
+                db.collection("account").document("MERCHANT").collection(email).document("data account")
+                        .get()
+                        .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                            @Override
+                            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                if(documentSnapshot.exists()) {
+
+                                    String coinMerchant = documentSnapshot.getString("Coin");
+                                    double coinMerchantInt = Double.valueOf(coinMerchant);
+                                    double priceInt = Double.valueOf(userArrayList.get(position).getPriceOrder());
+                                    int countfoodInt = Integer.valueOf(userArrayList.get(position).getCountfood());
+                                    coinMerchantInt = coinMerchantInt + (priceInt * countfoodInt);
+                                    //Toast.makeText(recyclerview.getActivity().getApplicationContext(), "Coin is : " + coinMerchantInt, Toast.LENGTH_SHORT).show();
+
+                                    db = FirebaseFirestore.getInstance();
+                                    Map<String , Object> coinOnly = new HashMap<>();
+                                    coinOnly.put("Coin",""+ coinMerchantInt);
+                                    db.collection("account").document("MERCHANT").collection(email).document("data account")
+                                            .set(coinOnly,SetOptions.merge());
+                                }
+
+                            }
+                        });
+
+
+
                 db = FirebaseFirestore.getInstance();
                 Map<String,Object> info = new HashMap<>();
                 info.put("Customer E-mail",userArrayList.get(position).getEmailOrder());
@@ -72,9 +108,13 @@ public class MyRecyclerviewAdapterOrder extends RecyclerView.Adapter<MyRecyclerv
                 info.put("URL",userArrayList.get(position).getUrlOrder());
                 db.collection("History").document("Merchant").collection(nameres).document(userArrayList.get(position).getFoodnameOrder())
                 .set(info);
+
+
                 deleteSelectRow(position);
             }
         });
+
+
     }
 
     @Override
