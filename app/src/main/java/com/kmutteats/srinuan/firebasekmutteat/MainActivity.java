@@ -147,13 +147,13 @@ public class MainActivity extends AppCompatActivity
 
 
         });
-        logo.setOnClickListener(new View.OnClickListener() {
+        /*logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent y = new Intent(MainActivity.this,Homecustumer.class);  ///////////////////////////////////////////// !!!!!!! อันนี้เป็นปุ่มเทสที่อยู่บนสุดของหน้าแรก
                 startActivity(y);
             }
-        });
+        });*/
 
     }
     @Override
